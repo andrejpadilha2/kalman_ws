@@ -1,0 +1,86 @@
+[0.000000] (-) TimerEvent: {}
+[0.000116] (kalman_1d) JobQueued: {'identifier': 'kalman_1d', 'dependencies': OrderedDict()}
+[0.000458] (kalman_1d) JobStarted: {'identifier': 'kalman_1d'}
+[0.099779] (-) TimerEvent: {}
+[0.200154] (-) TimerEvent: {}
+[0.300435] (-) TimerEvent: {}
+[0.400704] (-) TimerEvent: {}
+[0.500992] (-) TimerEvent: {}
+[0.601256] (-) TimerEvent: {}
+[0.701512] (-) TimerEvent: {}
+[0.801778] (-) TimerEvent: {}
+[0.902114] (-) TimerEvent: {}
+[1.002499] (-) TimerEvent: {}
+[1.102799] (-) TimerEvent: {}
+[1.203079] (-) TimerEvent: {}
+[1.303353] (-) TimerEvent: {}
+[1.403601] (-) TimerEvent: {}
+[1.503906] (-) TimerEvent: {}
+[1.604173] (-) TimerEvent: {}
+[1.704466] (-) TimerEvent: {}
+[1.804757] (-) TimerEvent: {}
+[1.905036] (-) TimerEvent: {}
+[2.005347] (-) TimerEvent: {}
+[2.011222] (kalman_1d) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/kalman_1d', 'build', '--build-base', '/home/andrejpadilha/kalman_ws/build/kalman_1d/build', 'install', '--prefix', '/home/andrejpadilha/kalman_ws/install/kalman_1d', '--record', '/home/andrejpadilha/kalman_ws/build/kalman_1d/install.log', '--single-version-externally-managed'], 'cwd': '/home/andrejpadilha/kalman_ws/src/kalman_1d', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'andrejpadilha', 'LC_TIME': 'pt_BR.UTF-8', 'SSH_AGENT_PID': '83694', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/andrejpadilha', 'OLDPWD': '/home/andrejpadilha', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '\\033[01;32m\\W $ \\033[00m', 'LC_MONETARY': 'pt_BR.UTF-8', 'MANAGERPID': '83499', 'LC_CTYPE': 'pt_BR.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'andrejpadilha', 'JOURNAL_STREAM': '8:1083810', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'andrejpadilha', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/andrejpadilha/anaconda3/bin:/home/andrejpadilha/bin:/home/andrejpadilha/.local/bin:/home/andrejpadilha/bin:/home/andrejpadilha/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/andrejpadilha-Inspiron-7472:@/tmp/.ICE-unix/83738,unix/andrejpadilha-Inspiron-7472:/tmp/.ICE-unix/83738', 'INVOCATION_ID': '99cf7fb240a947d9892a4f022f17ec8b', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_BR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4729b385_79ba_4bc9_a0fd_0c5a823f4b32', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.81', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/andrejpadilha/kalman_ws/build/kalman_1d', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'EDITOR': 'nano -w'}, 'shell': False}
+[2.105526] (-) TimerEvent: {}
+[2.205879] (-) TimerEvent: {}
+[2.306151] (-) TimerEvent: {}
+[2.321076] (kalman_1d) StderrLine: {'line': b"/home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[2.321327] (kalman_1d) StderrLine: {'line': b'  warnings.warn(\n'}
+[2.321439] (kalman_1d) StderrLine: {'line': b"/home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead\n"}
+[2.321504] (kalman_1d) StderrLine: {'line': b'  warnings.warn(\n'}
+[2.406281] (-) TimerEvent: {}
+[2.506557] (-) TimerEvent: {}
+[2.606879] (-) TimerEvent: {}
+[2.707146] (-) TimerEvent: {}
+[2.807416] (-) TimerEvent: {}
+[2.893445] (kalman_1d) StdoutLine: {'line': b'running egg_info\n'}
+[2.907543] (-) TimerEvent: {}
+[2.955032] (kalman_1d) StdoutLine: {'line': b'writing ../../build/kalman_1d/kalman_1d.egg-info/PKG-INFO\n'}
+[3.001757] (kalman_1d) StdoutLine: {'line': b'writing dependency_links to ../../build/kalman_1d/kalman_1d.egg-info/dependency_links.txt\n'}
+[3.007657] (-) TimerEvent: {}
+[3.107899] (-) TimerEvent: {}
+[3.147584] (kalman_1d) StdoutLine: {'line': b'writing entry points to ../../build/kalman_1d/kalman_1d.egg-info/entry_points.txt\n'}
+[3.208031] (-) TimerEvent: {}
+[3.241883] (kalman_1d) StdoutLine: {'line': b'writing requirements to ../../build/kalman_1d/kalman_1d.egg-info/requires.txt\n'}
+[3.289234] (kalman_1d) StdoutLine: {'line': b'writing top-level names to ../../build/kalman_1d/kalman_1d.egg-info/top_level.txt\n'}
+[3.308147] (-) TimerEvent: {}
+[3.367655] (kalman_1d) StdoutLine: {'line': b"reading manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'\n"}
+[3.368386] (kalman_1d) StdoutLine: {'line': b"writing manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'\n"}
+[3.368623] (kalman_1d) StdoutLine: {'line': b'running build\n'}
+[3.368716] (kalman_1d) StdoutLine: {'line': b'running build_py\n'}
+[3.368946] (kalman_1d) StdoutLine: {'line': b'copying kalman_1d/teleport_service (copy).py -> /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d\n'}
+[3.369144] (kalman_1d) StdoutLine: {'line': b'copying kalman_1d/teleport_service.py -> /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d\n'}
+[3.369302] (kalman_1d) StdoutLine: {'line': b'running install\n'}
+[3.369480] (kalman_1d) StderrLine: {'line': b'/home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[3.369572] (kalman_1d) StderrLine: {'line': b'  warnings.warn(\n'}
+[3.374263] (kalman_1d) StdoutLine: {'line': b'running install_lib\n'}
+[3.408278] (-) TimerEvent: {}
+[3.452446] (kalman_1d) StdoutLine: {'line': b'copying /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d/teleport_service (copy).py -> /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d\n'}
+[3.452733] (kalman_1d) StdoutLine: {'line': b'copying /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d/teleport_service.py -> /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d\n'}
+[3.452963] (kalman_1d) StdoutLine: {'line': b'byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service (copy).py to teleport_service (copy).cpython-38.pyc\n'}
+[3.453257] (kalman_1d) StdoutLine: {'line': b'byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service.py to teleport_service.cpython-38.pyc\n'}
+[3.453447] (kalman_1d) StderrLine: {'line': b'  File "/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service (copy).py", line 52\n'}
+[3.453602] (kalman_1d) StderrLine: {'line': b'    except rospy.ServiceException, e:\n'}
+[3.453667] (kalman_1d) StderrLine: {'line': b'                                 ^\n'}
+[3.453751] (kalman_1d) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[3.453808] (kalman_1d) StderrLine: {'line': b'\n'}
+[3.453863] (kalman_1d) StderrLine: {'line': b'  File "/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service.py", line 52\n'}
+[3.453919] (kalman_1d) StderrLine: {'line': b'    except rospy.ServiceException, e:\n'}
+[3.453979] (kalman_1d) StderrLine: {'line': b'                                 ^\n'}
+[3.454035] (kalman_1d) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[3.454092] (kalman_1d) StderrLine: {'line': b'\n'}
+[3.454159] (kalman_1d) StdoutLine: {'line': b'running install_data\n'}
+[3.468539] (kalman_1d) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.508397] (-) TimerEvent: {}
+[3.530111] (kalman_1d) StdoutLine: {'line': b"removing '/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[3.530394] (kalman_1d) StdoutLine: {'line': b'Copying ../../build/kalman_1d/kalman_1d.egg-info to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info\n'}
+[3.531175] (kalman_1d) StdoutLine: {'line': b'running install_scripts\n'}
+[3.608529] (-) TimerEvent: {}
+[3.648768] (kalman_1d) StdoutLine: {'line': b'Installing teleport_service script to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/kalman_1d\n'}
+[3.649001] (kalman_1d) StdoutLine: {'line': b'Installing turtlebot3_move script to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/kalman_1d\n'}
+[3.649219] (kalman_1d) StdoutLine: {'line': b"writing list of installed files to '/home/andrejpadilha/kalman_ws/build/kalman_1d/install.log'\n"}
+[3.692923] (kalman_1d) CommandEnded: {'returncode': 0}
+[3.708841] (-) TimerEvent: {}
+[3.709233] (kalman_1d) JobEnded: {'identifier': 'kalman_1d', 'rc': 0}
+[3.710234] (-) EventReactorShutdown: {}

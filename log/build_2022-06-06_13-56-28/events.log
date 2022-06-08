@@ -1,0 +1,302 @@
+[0.000000] (-) TimerEvent: {}
+[0.001662] (kalman_1d) JobQueued: {'identifier': 'kalman_1d', 'dependencies': OrderedDict()}
+[0.005817] (kalman_1d) JobStarted: {'identifier': 'kalman_1d'}
+[0.099161] (-) TimerEvent: {}
+[0.200925] (-) TimerEvent: {}
+[0.301596] (-) TimerEvent: {}
+[0.402787] (-) TimerEvent: {}
+[0.504285] (-) TimerEvent: {}
+[0.605361] (-) TimerEvent: {}
+[0.706473] (-) TimerEvent: {}
+[0.807881] (-) TimerEvent: {}
+[0.909336] (-) TimerEvent: {}
+[1.010601] (-) TimerEvent: {}
+[1.112013] (-) TimerEvent: {}
+[1.212689] (-) TimerEvent: {}
+[1.313265] (-) TimerEvent: {}
+[1.415054] (-) TimerEvent: {}
+[1.516373] (-) TimerEvent: {}
+[1.618006] (-) TimerEvent: {}
+[1.719361] (-) TimerEvent: {}
+[1.820792] (-) TimerEvent: {}
+[1.921739] (-) TimerEvent: {}
+[2.023352] (-) TimerEvent: {}
+[2.124822] (-) TimerEvent: {}
+[2.225726] (-) TimerEvent: {}
+[2.326703] (-) TimerEvent: {}
+[2.427979] (-) TimerEvent: {}
+[2.530483] (-) TimerEvent: {}
+[2.633464] (-) TimerEvent: {}
+[2.735527] (-) TimerEvent: {}
+[2.836788] (-) TimerEvent: {}
+[2.938319] (-) TimerEvent: {}
+[3.040000] (-) TimerEvent: {}
+[3.141379] (-) TimerEvent: {}
+[3.242895] (-) TimerEvent: {}
+[3.344866] (-) TimerEvent: {}
+[3.446536] (-) TimerEvent: {}
+[3.547763] (-) TimerEvent: {}
+[3.649039] (-) TimerEvent: {}
+[3.750386] (-) TimerEvent: {}
+[3.851618] (-) TimerEvent: {}
+[3.953252] (-) TimerEvent: {}
+[4.054061] (-) TimerEvent: {}
+[4.155850] (-) TimerEvent: {}
+[4.258317] (-) TimerEvent: {}
+[4.360176] (-) TimerEvent: {}
+[4.461906] (-) TimerEvent: {}
+[4.563300] (-) TimerEvent: {}
+[4.665016] (-) TimerEvent: {}
+[4.766320] (-) TimerEvent: {}
+[4.867937] (-) TimerEvent: {}
+[4.969593] (-) TimerEvent: {}
+[5.071496] (-) TimerEvent: {}
+[5.173116] (-) TimerEvent: {}
+[5.274771] (-) TimerEvent: {}
+[5.376412] (-) TimerEvent: {}
+[5.478059] (-) TimerEvent: {}
+[5.579478] (-) TimerEvent: {}
+[5.681138] (-) TimerEvent: {}
+[5.783690] (-) TimerEvent: {}
+[5.885938] (-) TimerEvent: {}
+[5.986741] (-) TimerEvent: {}
+[6.088208] (-) TimerEvent: {}
+[6.189636] (-) TimerEvent: {}
+[6.290355] (-) TimerEvent: {}
+[6.392266] (-) TimerEvent: {}
+[6.493645] (-) TimerEvent: {}
+[6.595337] (-) TimerEvent: {}
+[6.697009] (-) TimerEvent: {}
+[6.797818] (-) TimerEvent: {}
+[6.899103] (-) TimerEvent: {}
+[7.000009] (-) TimerEvent: {}
+[7.100974] (-) TimerEvent: {}
+[7.202384] (-) TimerEvent: {}
+[7.303234] (-) TimerEvent: {}
+[7.404984] (-) TimerEvent: {}
+[7.506528] (-) TimerEvent: {}
+[7.608172] (-) TimerEvent: {}
+[7.709043] (-) TimerEvent: {}
+[7.809773] (-) TimerEvent: {}
+[7.911256] (-) TimerEvent: {}
+[8.012344] (-) TimerEvent: {}
+[8.114007] (-) TimerEvent: {}
+[8.215120] (-) TimerEvent: {}
+[8.316467] (-) TimerEvent: {}
+[8.417822] (-) TimerEvent: {}
+[8.519390] (-) TimerEvent: {}
+[8.620105] (-) TimerEvent: {}
+[8.721648] (-) TimerEvent: {}
+[8.823225] (-) TimerEvent: {}
+[8.924909] (-) TimerEvent: {}
+[9.026277] (-) TimerEvent: {}
+[9.127318] (-) TimerEvent: {}
+[9.228910] (-) TimerEvent: {}
+[9.330252] (-) TimerEvent: {}
+[9.431504] (-) TimerEvent: {}
+[9.533064] (-) TimerEvent: {}
+[9.634032] (-) TimerEvent: {}
+[9.735181] (-) TimerEvent: {}
+[9.835818] (-) TimerEvent: {}
+[9.936734] (-) TimerEvent: {}
+[10.037796] (-) TimerEvent: {}
+[10.139383] (-) TimerEvent: {}
+[10.241191] (-) TimerEvent: {}
+[10.342511] (-) TimerEvent: {}
+[10.443956] (-) TimerEvent: {}
+[10.545533] (-) TimerEvent: {}
+[10.647246] (-) TimerEvent: {}
+[10.748562] (-) TimerEvent: {}
+[10.849129] (-) TimerEvent: {}
+[10.949855] (-) TimerEvent: {}
+[11.050458] (-) TimerEvent: {}
+[11.152109] (-) TimerEvent: {}
+[11.252954] (-) TimerEvent: {}
+[11.353633] (-) TimerEvent: {}
+[11.455270] (-) TimerEvent: {}
+[11.556631] (-) TimerEvent: {}
+[11.657772] (-) TimerEvent: {}
+[11.759047] (-) TimerEvent: {}
+[11.859955] (-) TimerEvent: {}
+[11.961261] (-) TimerEvent: {}
+[12.062360] (-) TimerEvent: {}
+[12.163998] (-) TimerEvent: {}
+[12.265057] (-) TimerEvent: {}
+[12.365976] (-) TimerEvent: {}
+[12.467560] (-) TimerEvent: {}
+[12.569001] (-) TimerEvent: {}
+[12.670616] (-) TimerEvent: {}
+[12.772363] (-) TimerEvent: {}
+[12.873779] (-) TimerEvent: {}
+[12.975021] (-) TimerEvent: {}
+[13.077040] (-) TimerEvent: {}
+[13.178302] (-) TimerEvent: {}
+[13.280086] (-) TimerEvent: {}
+[13.380951] (-) TimerEvent: {}
+[13.482418] (-) TimerEvent: {}
+[13.584247] (-) TimerEvent: {}
+[13.685281] (-) TimerEvent: {}
+[13.786216] (-) TimerEvent: {}
+[13.888003] (-) TimerEvent: {}
+[13.990974] (-) TimerEvent: {}
+[14.073589] (kalman_1d) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/kalman_1d', 'build', '--build-base', '/home/andrejpadilha/kalman_ws/build/kalman_1d/build', 'install', '--prefix', '/home/andrejpadilha/kalman_ws/install/kalman_1d', '--record', '/home/andrejpadilha/kalman_ws/build/kalman_1d/install.log', '--single-version-externally-managed'], 'cwd': '/home/andrejpadilha/kalman_ws/src/kalman_1d', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'andrejpadilha', 'LC_TIME': 'pt_BR.UTF-8', 'SSH_AGENT_PID': '1337', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/andrejpadilha', 'OLDPWD': '/home/andrejpadilha/kalman_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '\\033[01;32m\\W $ \\033[00m', 'LC_MONETARY': 'pt_BR.UTF-8', 'MANAGERPID': '1102', 'LC_CTYPE': 'pt_BR.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=e195585b664a72e3cb90f3e2629bcff3', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'andrejpadilha', 'JOURNAL_STREAM': '8:41694', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'andrejpadilha', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/andrejpadilha/anaconda3/bin:/home/andrejpadilha/bin:/home/andrejpadilha/.local/bin:/home/andrejpadilha/bin:/home/andrejpadilha/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/andrejpadilha-Inspiron-7472:@/tmp/.ICE-unix/1368,unix/andrejpadilha-Inspiron-7472:/tmp/.ICE-unix/1368', 'INVOCATION_ID': '665393c5a83e4b83afa6b6e2b67cd122', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_BR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/756c26e1_9fe1_4351_a96d_4bf65c42f585', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.479', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/andrejpadilha/kalman_ws/build/kalman_1d', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=e195585b664a72e3cb90f3e2629bcff3', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'EDITOR': 'nano -w'}, 'shell': False}
+[14.096189] (-) TimerEvent: {}
+[14.198918] (-) TimerEvent: {}
+[14.300031] (-) TimerEvent: {}
+[14.401317] (-) TimerEvent: {}
+[14.502255] (-) TimerEvent: {}
+[14.603349] (-) TimerEvent: {}
+[14.705217] (-) TimerEvent: {}
+[14.806653] (-) TimerEvent: {}
+[14.907796] (-) TimerEvent: {}
+[15.008287] (-) TimerEvent: {}
+[15.109497] (-) TimerEvent: {}
+[15.210038] (-) TimerEvent: {}
+[15.311563] (-) TimerEvent: {}
+[15.412486] (-) TimerEvent: {}
+[15.513934] (-) TimerEvent: {}
+[15.615324] (-) TimerEvent: {}
+[15.710169] (kalman_1d) StderrLine: {'line': b"/home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[15.711517] (kalman_1d) StderrLine: {'line': b'  warnings.warn(\n'}
+[15.712505] (kalman_1d) StderrLine: {'line': b"/home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead\n"}
+[15.713144] (kalman_1d) StderrLine: {'line': b'  warnings.warn(\n'}
+[15.715668] (-) TimerEvent: {}
+[15.817037] (-) TimerEvent: {}
+[15.918384] (-) TimerEvent: {}
+[16.019466] (-) TimerEvent: {}
+[16.120904] (-) TimerEvent: {}
+[16.222303] (-) TimerEvent: {}
+[16.323196] (-) TimerEvent: {}
+[16.424597] (-) TimerEvent: {}
+[16.525648] (-) TimerEvent: {}
+[16.626412] (-) TimerEvent: {}
+[16.727707] (-) TimerEvent: {}
+[16.828675] (-) TimerEvent: {}
+[16.930233] (-) TimerEvent: {}
+[17.031847] (-) TimerEvent: {}
+[17.132999] (-) TimerEvent: {}
+[17.234526] (-) TimerEvent: {}
+[17.335696] (-) TimerEvent: {}
+[17.436985] (-) TimerEvent: {}
+[17.538661] (-) TimerEvent: {}
+[17.640226] (-) TimerEvent: {}
+[17.741852] (-) TimerEvent: {}
+[17.843283] (-) TimerEvent: {}
+[17.944328] (-) TimerEvent: {}
+[18.045098] (-) TimerEvent: {}
+[18.147074] (-) TimerEvent: {}
+[18.248492] (-) TimerEvent: {}
+[18.349658] (-) TimerEvent: {}
+[18.451370] (-) TimerEvent: {}
+[18.552989] (-) TimerEvent: {}
+[18.654662] (-) TimerEvent: {}
+[18.756100] (-) TimerEvent: {}
+[18.857148] (-) TimerEvent: {}
+[18.957910] (-) TimerEvent: {}
+[19.058615] (-) TimerEvent: {}
+[19.160055] (-) TimerEvent: {}
+[19.261149] (-) TimerEvent: {}
+[19.361950] (-) TimerEvent: {}
+[19.463316] (-) TimerEvent: {}
+[19.564802] (-) TimerEvent: {}
+[19.666358] (-) TimerEvent: {}
+[19.767092] (-) TimerEvent: {}
+[19.868481] (-) TimerEvent: {}
+[19.940779] (kalman_1d) StdoutLine: {'line': b'running egg_info\n'}
+[19.944006] (kalman_1d) StdoutLine: {'line': b'creating ../../build/kalman_1d/kalman_1d.egg-info\n'}
+[19.968859] (-) TimerEvent: {}
+[20.070067] (-) TimerEvent: {}
+[20.171497] (-) TimerEvent: {}
+[20.273284] (-) TimerEvent: {}
+[20.374543] (-) TimerEvent: {}
+[20.409320] (kalman_1d) StdoutLine: {'line': b'writing ../../build/kalman_1d/kalman_1d.egg-info/PKG-INFO\n'}
+[20.474977] (-) TimerEvent: {}
+[20.576540] (-) TimerEvent: {}
+[20.677563] (-) TimerEvent: {}
+[20.758733] (kalman_1d) StdoutLine: {'line': b'writing dependency_links to ../../build/kalman_1d/kalman_1d.egg-info/dependency_links.txt\n'}
+[20.777929] (-) TimerEvent: {}
+[20.879352] (-) TimerEvent: {}
+[20.980887] (-) TimerEvent: {}
+[21.082548] (-) TimerEvent: {}
+[21.184169] (-) TimerEvent: {}
+[21.285129] (-) TimerEvent: {}
+[21.386203] (-) TimerEvent: {}
+[21.487937] (-) TimerEvent: {}
+[21.589216] (-) TimerEvent: {}
+[21.690727] (-) TimerEvent: {}
+[21.792374] (-) TimerEvent: {}
+[21.836602] (kalman_1d) StdoutLine: {'line': b'writing entry points to ../../build/kalman_1d/kalman_1d.egg-info/entry_points.txt\n'}
+[21.892746] (-) TimerEvent: {}
+[21.993820] (-) TimerEvent: {}
+[22.095209] (-) TimerEvent: {}
+[22.195827] (-) TimerEvent: {}
+[22.296876] (-) TimerEvent: {}
+[22.398019] (-) TimerEvent: {}
+[22.499778] (-) TimerEvent: {}
+[22.576639] (kalman_1d) StdoutLine: {'line': b'writing requirements to ../../build/kalman_1d/kalman_1d.egg-info/requires.txt\n'}
+[22.600025] (-) TimerEvent: {}
+[22.701307] (-) TimerEvent: {}
+[22.802467] (-) TimerEvent: {}
+[22.903612] (-) TimerEvent: {}
+[23.003628] (kalman_1d) StdoutLine: {'line': b'writing top-level names to ../../build/kalman_1d/kalman_1d.egg-info/top_level.txt\n'}
+[23.005010] (-) TimerEvent: {}
+[23.017654] (kalman_1d) StdoutLine: {'line': b"writing manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'\n"}
+[23.105234] (-) TimerEvent: {}
+[23.205883] (-) TimerEvent: {}
+[23.307548] (-) TimerEvent: {}
+[23.409121] (-) TimerEvent: {}
+[23.510147] (-) TimerEvent: {}
+[23.611633] (-) TimerEvent: {}
+[23.611979] (kalman_1d) StdoutLine: {'line': b"reading manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'\n"}
+[23.617785] (kalman_1d) StdoutLine: {'line': b"writing manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'\n"}
+[23.618577] (kalman_1d) StdoutLine: {'line': b'running build\n'}
+[23.620239] (kalman_1d) StdoutLine: {'line': b'running build_py\n'}
+[23.621180] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/build/kalman_1d/build\n'}
+[23.621868] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib\n'}
+[23.622179] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d\n'}
+[23.622405] (kalman_1d) StdoutLine: {'line': b'copying kalman_1d/turtlebot3_move.py -> /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d\n'}
+[23.622574] (kalman_1d) StdoutLine: {'line': b'copying kalman_1d/__init__.py -> /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d\n'}
+[23.623295] (kalman_1d) StdoutLine: {'line': b'running install\n'}
+[23.624527] (kalman_1d) StderrLine: {'line': b'/home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[23.625140] (kalman_1d) StderrLine: {'line': b'  warnings.warn(\n'}
+[23.653537] (kalman_1d) StdoutLine: {'line': b'running install_lib\n'}
+[23.712100] (-) TimerEvent: {}
+[23.813044] (-) TimerEvent: {}
+[23.914505] (-) TimerEvent: {}
+[24.016365] (-) TimerEvent: {}
+[24.075997] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d\n'}
+[24.077947] (kalman_1d) StdoutLine: {'line': b'copying /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d/turtlebot3_move.py -> /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d\n'}
+[24.079340] (kalman_1d) StdoutLine: {'line': b'copying /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d/__init__.py -> /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d\n'}
+[24.080345] (kalman_1d) StdoutLine: {'line': b'byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/turtlebot3_move.py to turtlebot3_move.cpython-38.pyc\n'}
+[24.083072] (kalman_1d) StdoutLine: {'line': b'byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/__init__.py to __init__.cpython-38.pyc\n'}
+[24.084257] (kalman_1d) StdoutLine: {'line': b'running install_data\n'}
+[24.116372] (-) TimerEvent: {}
+[24.167987] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/install/kalman_1d/share/ament_index\n'}
+[24.169142] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/install/kalman_1d/share/ament_index/resource_index\n'}
+[24.171023] (kalman_1d) StdoutLine: {'line': b'creating /home/andrejpadilha/kalman_ws/install/kalman_1d/share/ament_index/resource_index/packages\n'}
+[24.172013] (kalman_1d) StdoutLine: {'line': b'copying resource/kalman_1d -> /home/andrejpadilha/kalman_ws/install/kalman_1d/share/ament_index/resource_index/packages\n'}
+[24.172901] (kalman_1d) StdoutLine: {'line': b'copying package.xml -> /home/andrejpadilha/kalman_ws/install/kalman_1d/share/kalman_1d\n'}
+[24.173699] (kalman_1d) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.216746] (-) TimerEvent: {}
+[24.318260] (-) TimerEvent: {}
+[24.419142] (-) TimerEvent: {}
+[24.520648] (-) TimerEvent: {}
+[24.621851] (-) TimerEvent: {}
+[24.687525] (kalman_1d) StdoutLine: {'line': b'Copying ../../build/kalman_1d/kalman_1d.egg-info to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info\n'}
+[24.692212] (kalman_1d) StdoutLine: {'line': b'running install_scripts\n'}
+[24.722158] (-) TimerEvent: {}
+[24.823015] (-) TimerEvent: {}
+[24.923610] (-) TimerEvent: {}
+[25.025417] (-) TimerEvent: {}
+[25.126640] (-) TimerEvent: {}
+[25.228066] (-) TimerEvent: {}
+[25.329495] (-) TimerEvent: {}
+[25.397039] (kalman_1d) StdoutLine: {'line': b'Installing talker script to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/kalman_1d\n'}
+[25.398830] (kalman_1d) StdoutLine: {'line': b"writing list of installed files to '/home/andrejpadilha/kalman_ws/build/kalman_1d/install.log'\n"}
+[25.429931] (-) TimerEvent: {}
+[25.531503] (-) TimerEvent: {}
+[25.633274] (-) TimerEvent: {}
+[25.713388] (kalman_1d) CommandEnded: {'returncode': 0}
+[25.733704] (-) TimerEvent: {}
+[25.802437] (kalman_1d) JobEnded: {'identifier': 'kalman_1d', 'rc': 0}
+[25.806738] (-) EventReactorShutdown: {}

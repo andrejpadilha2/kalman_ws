@@ -1,0 +1,30 @@
+[14.916s] Invoking command in '/home/andrejpadilha/kalman_ws/src/kalman_1d': PYTHONPATH=/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kalman_1d build --build-base /home/andrejpadilha/kalman_ws/build/kalman_1d/build install --prefix /home/andrejpadilha/kalman_ws/install/kalman_1d --record /home/andrejpadilha/kalman_ws/build/kalman_1d/install.log --single-version-externally-managed
+[16.852s] /home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[16.853s]   warnings.warn(
+[16.858s] /home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[16.858s]   warnings.warn(
+[21.756s] running egg_info
+[22.265s] writing ../../build/kalman_1d/kalman_1d.egg-info/PKG-INFO
+[22.711s] writing dependency_links to ../../build/kalman_1d/kalman_1d.egg-info/dependency_links.txt
+[24.038s] writing entry points to ../../build/kalman_1d/kalman_1d.egg-info/entry_points.txt
+[24.895s] writing requirements to ../../build/kalman_1d/kalman_1d.egg-info/requires.txt
+[25.325s] writing top-level names to ../../build/kalman_1d/kalman_1d.egg-info/top_level.txt
+[25.938s] reading manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'
+[25.943s] writing manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'
+[25.945s] running build
+[25.945s] running build_py
+[25.946s] copying kalman_1d/turtlebot3_move.py -> /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d
+[25.947s] running install
+[25.947s] /home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[25.948s]   warnings.warn(
+[25.972s] running install_lib
+[26.547s] copying /home/andrejpadilha/kalman_ws/build/kalman_1d/build/lib/kalman_1d/turtlebot3_move.py -> /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d
+[26.551s] byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/turtlebot3_move.py to turtlebot3_move.cpython-38.pyc
+[26.555s] running install_data
+[26.629s] running install_egg_info
+[27.136s] removing '/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info' (and everything under it)
+[27.137s] Copying ../../build/kalman_1d/kalman_1d.egg-info to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info
+[27.141s] running install_scripts
+[27.893s] Installing turtlebot3_move script to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/kalman_1d
+[27.896s] writing list of installed files to '/home/andrejpadilha/kalman_ws/build/kalman_1d/install.log'
+[28.281s] Invoked command in '/home/andrejpadilha/kalman_ws/src/kalman_1d' returned '0': PYTHONPATH=/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kalman_1d build --build-base /home/andrejpadilha/kalman_ws/build/kalman_1d/build install --prefix /home/andrejpadilha/kalman_ws/install/kalman_1d --record /home/andrejpadilha/kalman_ws/build/kalman_1d/install.log --single-version-externally-managed

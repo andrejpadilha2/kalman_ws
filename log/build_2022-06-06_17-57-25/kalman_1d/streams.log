@@ -1,0 +1,40 @@
+[7.181s] Invoking command in '/home/andrejpadilha/kalman_ws/src/kalman_1d': PYTHONPATH=/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kalman_1d build --build-base /home/andrejpadilha/kalman_ws/build/kalman_1d/build install --prefix /home/andrejpadilha/kalman_ws/install/kalman_1d --record /home/andrejpadilha/kalman_ws/build/kalman_1d/install.log --single-version-externally-managed
+[8.120s] /home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[8.121s]   warnings.warn(
+[8.122s] /home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/dist.py:772: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[8.122s]   warnings.warn(
+[10.206s] running egg_info
+[10.448s] writing ../../build/kalman_1d/kalman_1d.egg-info/PKG-INFO
+[10.647s] writing dependency_links to ../../build/kalman_1d/kalman_1d.egg-info/dependency_links.txt
+[11.292s] writing entry points to ../../build/kalman_1d/kalman_1d.egg-info/entry_points.txt
+[11.719s] writing requirements to ../../build/kalman_1d/kalman_1d.egg-info/requires.txt
+[11.936s] writing top-level names to ../../build/kalman_1d/kalman_1d.egg-info/top_level.txt
+[12.351s] reading manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'
+[12.356s] writing manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'
+[12.357s] running build
+[12.358s] running build_py
+[12.358s] running install
+[12.359s] /home/andrejpadilha/.local/lib/python3.8/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[12.360s]   warnings.warn(
+[12.377s] running install_lib
+[12.717s] byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service (copy).py to teleport_service (copy).cpython-38.pyc
+[12.719s]   File "/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service (copy).py", line 52
+[12.721s]     except rospy.ServiceException, e:
+[12.722s]                                  ^
+[12.723s] SyntaxError: invalid syntax
+[12.723s] 
+[12.724s] byte-compiling /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service.py to teleport_service.cpython-38.pyc
+[12.724s]   File "/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service.py", line 52
+[12.725s]     except rospy.ServiceException, e:
+[12.725s]                                  ^
+[12.726s] SyntaxError: invalid syntax
+[12.726s] 
+[12.726s] running install_data
+[12.775s] running install_egg_info
+[13.069s] removing '/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info' (and everything under it)
+[13.070s] Copying ../../build/kalman_1d/kalman_1d.egg-info to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info
+[13.071s] running install_scripts
+[13.524s] Installing teleport_service script to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/kalman_1d
+[13.526s] Installing turtlebot3_move script to /home/andrejpadilha/kalman_ws/install/kalman_1d/lib/kalman_1d
+[13.527s] writing list of installed files to '/home/andrejpadilha/kalman_ws/build/kalman_1d/install.log'
+[13.778s] Invoked command in '/home/andrejpadilha/kalman_ws/src/kalman_1d' returned '0': PYTHONPATH=/home/andrejpadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kalman_1d build --build-base /home/andrejpadilha/kalman_ws/build/kalman_1d/build install --prefix /home/andrejpadilha/kalman_ws/install/kalman_1d --record /home/andrejpadilha/kalman_ws/build/kalman_1d/install.log --single-version-externally-managed
