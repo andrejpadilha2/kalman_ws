@@ -1,0 +1,20 @@
+[0.583s] Invoking command in '/home/andrepadilha/kalman_ws/src/obstacles_3d': PYTHONPATH=/home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/obstacles_3d build --build-base /home/andrepadilha/kalman_ws/build/obstacles_3d/build install --prefix /home/andrepadilha/kalman_ws/install/obstacles_3d --record /home/andrepadilha/kalman_ws/build/obstacles_3d/install.log --single-version-externally-managed
+[0.724s] running egg_info
+[0.725s] writing ../../build/obstacles_3d/obstacles_3d.egg-info/PKG-INFO
+[0.725s] writing dependency_links to ../../build/obstacles_3d/obstacles_3d.egg-info/dependency_links.txt
+[0.725s] writing entry points to ../../build/obstacles_3d/obstacles_3d.egg-info/entry_points.txt
+[0.725s] writing requirements to ../../build/obstacles_3d/obstacles_3d.egg-info/requires.txt
+[0.725s] writing top-level names to ../../build/obstacles_3d/obstacles_3d.egg-info/top_level.txt
+[0.748s] reading manifest file '../../build/obstacles_3d/obstacles_3d.egg-info/SOURCES.txt'
+[0.748s] writing manifest file '../../build/obstacles_3d/obstacles_3d.egg-info/SOURCES.txt'
+[0.748s] running build
+[0.748s] running build_py
+[0.749s] running install
+[0.749s] running install_lib
+[0.750s] running install_data
+[0.750s] running install_egg_info
+[0.751s] removing '/home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages/obstacles_3d-0.0.0-py3.8.egg-info' (and everything under it)
+[0.751s] Copying ../../build/obstacles_3d/obstacles_3d.egg-info to /home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages/obstacles_3d-0.0.0-py3.8.egg-info
+[0.752s] running install_scripts
+[0.763s] writing list of installed files to '/home/andrepadilha/kalman_ws/build/obstacles_3d/install.log'
+[0.785s] Invoked command in '/home/andrepadilha/kalman_ws/src/obstacles_3d' returned '0': PYTHONPATH=/home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/obstacles_3d build --build-base /home/andrepadilha/kalman_ws/build/obstacles_3d/build install --prefix /home/andrepadilha/kalman_ws/install/obstacles_3d --record /home/andrepadilha/kalman_ws/build/obstacles_3d/install.log --single-version-externally-managed

@@ -1,10 +1,12 @@
 from launch import LaunchDescription
-
-import launch.actions
-import launch_ros.actions
+from launch_ros.substitutions import FindPackageShare, FindPackagePrefix
 
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import PathJoinSubstitution
+
+import launch.actions
+import launch_ros.actions
 
 from ament_index_python import get_package_share_directory
 
@@ -13,13 +15,20 @@ import os
 def generate_launch_description():
     
 	os.environ["TURTLEBOT3_MODEL"] = "burger" # sets os environment variable needed to empty_world.launch.py (selects the turtlebot model)
+	
+	wall_path = os.path.abspath("src/obstacles_3d/models/brick_box_3x1x3/model.sdf")
     
 	return LaunchDescription([
 		
 		# INITIALIZES GAZEBO'S SIMULATION
 		IncludeLaunchDescription(
-			PythonLaunchDescriptionSource(
-				'/opt/ros/foxy/share/turtlebot3_gazebo/launch/empty_world.launch.py')
+			PythonLaunchDescriptionSource([
+				PathJoinSubstitution([
+					FindPackageShare('turtlebot3_gazebo'),
+					'launch',
+					'empty_world.launch.py'
+				])
+			])
 		),
 	
 		# SPAWNS THE WALL IN THE SIMULATION
@@ -31,7 +40,7 @@ def generate_launch_description():
 			name='spawn_wall',
 			arguments=[
 				'-entity', 'wall',
-				'-file', '/home/andrejpadilha/kalman_ws/models/brick_box_3x1x3/model.sdf',
+				'-file', wall_path,
 				'-x', '10',
 				'-Y', '1.5707']),
 				

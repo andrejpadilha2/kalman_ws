@@ -1,0 +1,34 @@
+[1.268s] Invoking command in '/home/andrepadilha/kalman_ws/src/kalman_1d': PYTHONPATH=/home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kalman_1d build --build-base /home/andrepadilha/kalman_ws/build/kalman_1d/build install --prefix /home/andrepadilha/kalman_ws/install/kalman_1d --record /home/andrepadilha/kalman_ws/build/kalman_1d/install.log --single-version-externally-managed
+[1.786s] running egg_info
+[1.787s] writing ../../build/kalman_1d/kalman_1d.egg-info/PKG-INFO
+[1.787s] writing dependency_links to ../../build/kalman_1d/kalman_1d.egg-info/dependency_links.txt
+[1.787s] writing entry points to ../../build/kalman_1d/kalman_1d.egg-info/entry_points.txt
+[1.787s] writing requirements to ../../build/kalman_1d/kalman_1d.egg-info/requires.txt
+[1.787s] writing top-level names to ../../build/kalman_1d/kalman_1d.egg-info/top_level.txt
+[1.816s] reading manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'
+[1.817s] writing manifest file '../../build/kalman_1d/kalman_1d.egg-info/SOURCES.txt'
+[1.817s] running build
+[1.817s] running build_py
+[1.817s] running install
+[1.819s] running install_lib
+[1.821s] byte-compiling /home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service.py to teleport_service.cpython-38.pyc
+[1.822s]   File "/home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service.py", line 52
+[1.822s]     except rospy.ServiceException, e:
+[1.822s]                                  ^
+[1.822s] SyntaxError: invalid syntax
+[1.822s] 
+[1.822s] byte-compiling /home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service (copy).py to teleport_service (copy).cpython-38.pyc
+[1.822s] running install_data
+[1.822s]   File "/home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d/teleport_service (copy).py", line 52
+[1.822s]     except rospy.ServiceException, e:
+[1.823s]                                  ^
+[1.823s] SyntaxError: invalid syntax
+[1.823s] 
+[1.823s] running install_egg_info
+[1.824s] removing '/home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info' (and everything under it)
+[1.825s] Copying ../../build/kalman_1d/kalman_1d.egg-info to /home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages/kalman_1d-0.0.0-py3.8.egg-info
+[1.825s] running install_scripts
+[1.844s] Installing teleport_service script to /home/andrepadilha/kalman_ws/install/kalman_1d/lib/kalman_1d
+[1.844s] Installing turtlebot3_move script to /home/andrepadilha/kalman_ws/install/kalman_1d/lib/kalman_1d
+[1.844s] writing list of installed files to '/home/andrepadilha/kalman_ws/build/kalman_1d/install.log'
+[1.856s] Invoked command in '/home/andrepadilha/kalman_ws/src/kalman_1d' returned '0': PYTHONPATH=/home/andrepadilha/kalman_ws/install/kalman_1d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kalman_1d build --build-base /home/andrepadilha/kalman_ws/build/kalman_1d/build install --prefix /home/andrepadilha/kalman_ws/install/kalman_1d --record /home/andrepadilha/kalman_ws/build/kalman_1d/install.log --single-version-externally-managed
