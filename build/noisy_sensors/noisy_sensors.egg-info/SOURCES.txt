@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/noisy_sensors/noisy_sensors.egg-info/PKG-INFO
+../../build/noisy_sensors/noisy_sensors.egg-info/SOURCES.txt
+../../build/noisy_sensors/noisy_sensors.egg-info/dependency_links.txt
+../../build/noisy_sensors/noisy_sensors.egg-info/entry_points.txt
+../../build/noisy_sensors/noisy_sensors.egg-info/requires.txt
+../../build/noisy_sensors/noisy_sensors.egg-info/top_level.txt
+../../build/noisy_sensors/noisy_sensors.egg-info/zip-safe
+noisy_sensors/__init__.py
+noisy_sensors/noisy_odom.py
+noisy_sensors/noisy_pose_turtlesim.py
+resource/noisy_sensors
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/noisy_sensors/noisy_sensors.egg-info
+writing ../../build/noisy_sensors/noisy_sensors.egg-info/PKG-INFO
+writing dependency_links to ../../build/noisy_sensors/noisy_sensors.egg-info/dependency_links.txt
+writing entry points to ../../build/noisy_sensors/noisy_sensors.egg-info/entry_points.txt
+writing requirements to ../../build/noisy_sensors/noisy_sensors.egg-info/requires.txt
+writing top-level names to ../../build/noisy_sensors/noisy_sensors.egg-info/top_level.txt
+writing manifest file '../../build/noisy_sensors/noisy_sensors.egg-info/SOURCES.txt'
+reading manifest file '../../build/noisy_sensors/noisy_sensors.egg-info/SOURCES.txt'
+writing manifest file '../../build/noisy_sensors/noisy_sensors.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/andrepadilha/kalman_ws/build/noisy_sensors/build
+creating /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib
+creating /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors
+copying noisy_sensors/noisy_pose_turtlesim.py -> /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors
+copying noisy_sensors/__init__.py -> /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors
+copying noisy_sensors/noisy_odom.py -> /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors
+running install
+running install_lib
+creating /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors
+copying /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors/noisy_pose_turtlesim.py -> /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors
+copying /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors/__init__.py -> /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors
+copying /home/andrepadilha/kalman_ws/build/noisy_sensors/build/lib/noisy_sensors/noisy_odom.py -> /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors
+byte-compiling /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors/noisy_pose_turtlesim.py to noisy_pose_turtlesim.cpython-38.pyc
+byte-compiling /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors/noisy_odom.py to noisy_odom.cpython-38.pyc
+running install_data
+creating /home/andrepadilha/kalman_ws/install/noisy_sensors/share/ament_index
+creating /home/andrepadilha/kalman_ws/install/noisy_sensors/share/ament_index/resource_index
+creating /home/andrepadilha/kalman_ws/install/noisy_sensors/share/ament_index/resource_index/packages
+copying resource/noisy_sensors -> /home/andrepadilha/kalman_ws/install/noisy_sensors/share/ament_index/resource_index/packages
+copying package.xml -> /home/andrepadilha/kalman_ws/install/noisy_sensors/share/noisy_sensors
+running install_egg_info
+Copying ../../build/noisy_sensors/noisy_sensors.egg-info to /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors-0.0.0-py3.8.egg-info
+running install_scripts
+Installing noisyOdom = noisy_sensors.noisy_odom:mainnoisyPoseTurtlesim script to /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/noisy_sensors
+writing list of installed files to '/home/andrepadilha/kalman_ws/build/noisy_sensors/install.log'

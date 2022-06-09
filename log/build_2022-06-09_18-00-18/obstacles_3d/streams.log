@@ -1,0 +1,33 @@
+[0.745s] Invoking command in '/home/andrepadilha/kalman_ws/src/obstacles_3d': PYTHONPATH=/home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/obstacles_3d build --build-base /home/andrepadilha/kalman_ws/build/obstacles_3d/build install --prefix /home/andrepadilha/kalman_ws/install/obstacles_3d --record /home/andrepadilha/kalman_ws/build/obstacles_3d/install.log --single-version-externally-managed
+[0.889s] running egg_info
+[0.889s] creating ../../build/obstacles_3d/obstacles_3d.egg-info
+[0.889s] writing ../../build/obstacles_3d/obstacles_3d.egg-info/PKG-INFO
+[0.889s] writing dependency_links to ../../build/obstacles_3d/obstacles_3d.egg-info/dependency_links.txt
+[0.889s] writing entry points to ../../build/obstacles_3d/obstacles_3d.egg-info/entry_points.txt
+[0.890s] writing requirements to ../../build/obstacles_3d/obstacles_3d.egg-info/requires.txt
+[0.890s] writing top-level names to ../../build/obstacles_3d/obstacles_3d.egg-info/top_level.txt
+[0.890s] writing manifest file '../../build/obstacles_3d/obstacles_3d.egg-info/SOURCES.txt'
+[0.912s] reading manifest file '../../build/obstacles_3d/obstacles_3d.egg-info/SOURCES.txt'
+[0.913s] writing manifest file '../../build/obstacles_3d/obstacles_3d.egg-info/SOURCES.txt'
+[0.913s] running build
+[0.913s] running build_py
+[0.913s] creating /home/andrepadilha/kalman_ws/build/obstacles_3d/build
+[0.913s] creating /home/andrepadilha/kalman_ws/build/obstacles_3d/build/lib
+[0.913s] creating /home/andrepadilha/kalman_ws/build/obstacles_3d/build/lib/obstacles_3d
+[0.913s] copying obstacles_3d/__init__.py -> /home/andrepadilha/kalman_ws/build/obstacles_3d/build/lib/obstacles_3d
+[0.913s] running install
+[0.914s] running install_lib
+[0.914s] creating /home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages/obstacles_3d
+[0.914s] copying /home/andrepadilha/kalman_ws/build/obstacles_3d/build/lib/obstacles_3d/__init__.py -> /home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages/obstacles_3d
+[0.915s] byte-compiling /home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages/obstacles_3d/__init__.py to __init__.cpython-38.pyc
+[0.915s] running install_data
+[0.916s] creating /home/andrepadilha/kalman_ws/install/obstacles_3d/share/ament_index
+[0.916s] creating /home/andrepadilha/kalman_ws/install/obstacles_3d/share/ament_index/resource_index
+[0.916s] creating /home/andrepadilha/kalman_ws/install/obstacles_3d/share/ament_index/resource_index/packages
+[0.916s] copying resource/obstacles_3d -> /home/andrepadilha/kalman_ws/install/obstacles_3d/share/ament_index/resource_index/packages
+[0.916s] copying package.xml -> /home/andrepadilha/kalman_ws/install/obstacles_3d/share/obstacles_3d
+[0.916s] running install_egg_info
+[0.917s] Copying ../../build/obstacles_3d/obstacles_3d.egg-info to /home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages/obstacles_3d-0.0.0-py3.8.egg-info
+[0.917s] running install_scripts
+[0.928s] writing list of installed files to '/home/andrepadilha/kalman_ws/build/obstacles_3d/install.log'
+[0.943s] Invoked command in '/home/andrepadilha/kalman_ws/src/obstacles_3d' returned '0': PYTHONPATH=/home/andrepadilha/kalman_ws/install/obstacles_3d/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/obstacles_3d build --build-base /home/andrepadilha/kalman_ws/build/obstacles_3d/build install --prefix /home/andrepadilha/kalman_ws/install/obstacles_3d --record /home/andrepadilha/kalman_ws/build/obstacles_3d/install.log --single-version-externally-managed

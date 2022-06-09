@@ -1,0 +1,4 @@
+[console_scripts]
+noisyOdom = noisy_sensors.noisy_odom:main
+noisyPoseTurtlesim = noisy_sensors.noisy_pose_turtlesim:main
+

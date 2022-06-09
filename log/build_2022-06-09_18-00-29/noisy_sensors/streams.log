@@ -1,0 +1,21 @@
+[0.754s] Invoking command in '/home/andrepadilha/kalman_ws/src/noisy_sensors': PYTHONPATH=/home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/noisy_sensors build --build-base /home/andrepadilha/kalman_ws/build/noisy_sensors/build install --prefix /home/andrepadilha/kalman_ws/install/noisy_sensors --record /home/andrepadilha/kalman_ws/build/noisy_sensors/install.log --single-version-externally-managed
+[0.899s] running egg_info
+[0.900s] writing ../../build/noisy_sensors/noisy_sensors.egg-info/PKG-INFO
+[0.900s] writing dependency_links to ../../build/noisy_sensors/noisy_sensors.egg-info/dependency_links.txt
+[0.900s] writing entry points to ../../build/noisy_sensors/noisy_sensors.egg-info/entry_points.txt
+[0.900s] writing requirements to ../../build/noisy_sensors/noisy_sensors.egg-info/requires.txt
+[0.900s] writing top-level names to ../../build/noisy_sensors/noisy_sensors.egg-info/top_level.txt
+[0.923s] reading manifest file '../../build/noisy_sensors/noisy_sensors.egg-info/SOURCES.txt'
+[0.924s] writing manifest file '../../build/noisy_sensors/noisy_sensors.egg-info/SOURCES.txt'
+[0.924s] running build
+[0.924s] running build_py
+[0.924s] running install
+[0.924s] running install_lib
+[0.925s] running install_data
+[0.926s] running install_egg_info
+[0.927s] removing '/home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors-0.0.0-py3.8.egg-info' (and everything under it)
+[0.927s] Copying ../../build/noisy_sensors/noisy_sensors.egg-info to /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages/noisy_sensors-0.0.0-py3.8.egg-info
+[0.927s] running install_scripts
+[0.938s] Installing noisyOdom = noisy_sensors.noisy_odom:mainnoisyPoseTurtlesim script to /home/andrepadilha/kalman_ws/install/noisy_sensors/lib/noisy_sensors
+[0.938s] writing list of installed files to '/home/andrepadilha/kalman_ws/build/noisy_sensors/install.log'
+[0.961s] Invoked command in '/home/andrepadilha/kalman_ws/src/noisy_sensors' returned '0': PYTHONPATH=/home/andrepadilha/kalman_ws/install/noisy_sensors/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/noisy_sensors build --build-base /home/andrepadilha/kalman_ws/build/noisy_sensors/build install --prefix /home/andrepadilha/kalman_ws/install/noisy_sensors --record /home/andrepadilha/kalman_ws/build/noisy_sensors/install.log --single-version-externally-managed
