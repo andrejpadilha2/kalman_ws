@@ -9,10 +9,8 @@ setup.py
 ../../build/kalman_1d/kalman_1d.egg-info/top_level.txt
 ../../build/kalman_1d/kalman_1d.egg-info/zip-safe
 kalman_1d/__init__.py
-kalman_1d/teleport_service (copy).py
-kalman_1d/teleport_service.py
-kalman_1d/turtlebot3_move.py
-launch/main.launch.py
+launch/turtlebot3.launch.py
+launch/turtlesim.launch.py
 resource/kalman_1d
 test/test_copyright.py
 test/test_flake8.py

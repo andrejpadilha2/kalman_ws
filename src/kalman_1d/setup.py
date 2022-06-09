@@ -23,8 +23,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'turtlebot3_move = kalman_1d.turtlebot3_move:main',
-        	'teleport_service = kalman_1d.teleport_service',
         ],
     },
 )
