@@ -6,25 +6,25 @@ from turtlesim.msg import Pose
 import random
 
 
-class PoseNoise(Node):
+class PoseKalmanFilter(Node):
 
 	def __init__(self):
-		super().__init__('pose_noise')
+		super().__init__('pose_kalman_filter')
 		
-		# Subscribes to turtle1 pose
-		self.pose_subscriber = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
+		# Subscribes to turtle1 noisy_pose
+		self.pose_subscriber = self.create_subscription(Pose, '/turtle1/noisy_pose', self.pose_callback, 10)
 		self.pose_subscriber # prevent unused variable warning
 		
 		self.pose_msg = Pose()
 		self.noisy_pose_msg = Pose()
 		
-		self.pose_publisher = self.create_publisher(Pose, '/turtle1/noisy_pose', 10) #creates the topic with the noisy measurements
+		self.pose_publisher = self.create_publisher(Pose, '/turtle1/kf_pose', 10) #creates the topic with the filtered measurements
 		
-		# Spawns a turtle to visualize noisy measurements
+		# Spawns a turtle to visualize filtered measurements
 		self.spawn_client = self.create_client(Spawn, 'spawn')
 		while not self.spawn_client.wait_for_service(timeout_sec=1.0):
 			self.get_logger().info('Spawn service not available, waiting again...')
-		noisy_turtle_name = "noisy_turtle1"
+		noisy_turtle_name = "kf_turtle1"
 		self.spawn_req = Spawn.Request()
 		self.spawn_req.x = 5.544445 # hard coded
 		self.spawn_req.y = 5.544445 # hard coded
