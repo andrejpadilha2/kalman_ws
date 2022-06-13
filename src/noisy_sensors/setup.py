@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'kalman_1d'
+package_name = 'noisy_sensors'
 
 setup(
     name=package_name,
@@ -16,13 +16,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='andrejpadilha',
-    maintainer_email='andrejpadilha@todo.todo',
+    maintainer='andrepadilha',
+    maintainer_email='andrejpadilha@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        	'noisyOdom = noisy_sensors.noisy_odom:main',
+        	'noisyPoseTurtlesim = noisy_sensors.noisy_pose_turtlesim:main'
         ],
     },
 )
