@@ -3,8 +3,8 @@
 <package format="3">
   <name>kalman_1d</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="andrejpadilha@todo.todo">andrejpadilha</maintainer>
+  <description>A package that implements kalman filter in one dimension (position in 1 axis), including simulations from "turtlesim" and "turtlebot" for visualization. </description>
+  <maintainer email="andrejpadilha@gmail.com">andrejpadilha</maintainer>
   <license>TODO: License declaration</license>
   
   <exec_depend>rclpy</exec_depend>
