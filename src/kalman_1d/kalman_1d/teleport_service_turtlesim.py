@@ -23,7 +23,6 @@ class TeleportServiceTurtlesim(Node):
 	def noisy_pose_callback(self, msg):
 		self.pose_msg = msg
 		if self.pose_msg.x >= 11:
-			print("teste")
 			self.teleport_req.x = 0.
 			self.teleport_req.y = self.pose_msg.y
 			self.teleport_req.theta = self.pose_msg.theta
