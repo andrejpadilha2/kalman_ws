@@ -21,8 +21,9 @@ class PoseNoise(Node):
 		
 		self.spawn_turtle(turtle_name='noisy_turtle1')
 		
-		timer_period = 0.2  # seconds
-		self.timer = self.create_timer(timer_period, self.publish_noisy_pose)	# timer that to set the frequency of sensor measurements
+		self.declare_parameter('dt')
+		dt = self.get_parameter('dt').get_parameter_value().double_value # seconds
+		self.timer = self.create_timer(dt, self.publish_noisy_pose)	# timer that to set the frequency of sensor measurements
 		
 	def pose_callback(self, msg):
 		self.pose_msg = msg
@@ -43,8 +44,8 @@ class PoseNoise(Node):
 		while not self.spawn_client.wait_for_service(timeout_sec=1.0):
 			self.get_logger().info('Spawn service not available, waiting again...')
 		self.spawn_req = Spawn.Request()
-		self.spawn_req.x = 5.544445 # hard coded
-		self.spawn_req.y = 5.544445 # hard coded
+		self.spawn_req.x = 0. # hard coded
+		self.spawn_req.y = 6.544445 # hard coded
 		self.spawn_req.theta = self.pose_msg.theta
 		self.spawn_req.name = turtle_name
 		self.future = self.spawn_client.call_async(self.spawn_req)

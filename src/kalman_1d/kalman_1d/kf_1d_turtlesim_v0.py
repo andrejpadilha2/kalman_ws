@@ -38,7 +38,7 @@ class PoseKalmanFilter(Node):
 		kf_turtle_name = "kf_turtle1"
 		self.spawn_req = Spawn.Request()
 		self.spawn_req.x = 5.544445 # hard coded
-		self.spawn_req.y = 5.544445 # hard coded
+		self.spawn_req.y = 4.544445 # hard coded
 		self.spawn_req.theta = self.noisy_pose_msg.theta
 		self.spawn_req.name = kf_turtle_name
 		self.future = self.spawn_client.call_async(self.spawn_req)

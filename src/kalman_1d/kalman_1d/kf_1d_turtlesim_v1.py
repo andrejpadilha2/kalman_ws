@@ -22,16 +22,17 @@ class PoseKalmanFilterNode(Node):
 		
 		self.spawn_turtle(turtle_name="kf_turtle1")
 		
-		timer_period = 0.02  # seconds
+		self.declare_parameter('dt')
+		dt = self.get_parameter('dt').get_parameter_value().double_value # seconds
 		self.kf = position_filter_1d(
 						x=0.,			# initial position mean
 						P=20.**2,		# initial position variance
 						vel=.3,		# velocity of the turtle
 						R=.25,			# sensor/measurement variance
 						Q=.001,		# process variance
-						dt=timer_period)	# time step in seconds
+						dt=dt)	# time step in seconds
 		
-		self.timer = self.create_timer(timer_period, self.publish_kf_pose)	# timer to set the frequency of filter messages
+		self.timer = self.create_timer(dt, self.publish_kf_pose)	# timer to set the frequency of filter messages
 		
 	def noisy_pose_callback(self, msg):
 		self.noisy_pose_msg = msg
@@ -56,8 +57,8 @@ class PoseKalmanFilterNode(Node):
 		while not self.spawn_client.wait_for_service(timeout_sec=1.0):
 			self.get_logger().info('Spawn service not available, waiting again...')
 		self.spawn_req = Spawn.Request()
-		self.spawn_req.x = 5.544445 # hard coded
-		self.spawn_req.y = 5.544445 # hard coded
+		self.spawn_req.x = 0. # hard coded
+		self.spawn_req.y = 4.544445 # hard coded
 		self.spawn_req.theta = self.noisy_pose_msg.theta
 		self.spawn_req.name = turtle_name
 		self.future = self.spawn_client.call_async(self.spawn_req)

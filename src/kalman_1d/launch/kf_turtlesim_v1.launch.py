@@ -5,7 +5,7 @@ import launch_ros.actions
 from launch.actions import ExecuteProcess
 
 def generate_launch_description():
-   
+	dt = 0.02
     
 	return LaunchDescription([
         	launch_ros.actions.Node( # initialize turtlesim simulation
@@ -24,13 +24,19 @@ def generate_launch_description():
 			package='noisy_sensors',
 			#namespace='turtlesim1',
 			executable='noisy_pose_turtlesim',
-			name='noisy_pose_turtlesim'
+			name='noisy_pose_turtlesim',
+			parameters=[
+				{'dt': dt}
+			]
 		), 
 		launch_ros.actions.Node( # initialize node that filters noisy sensor
 			package='kalman_1d',
 			#namespace='turtlesim1',
 			executable='kf_1d_turtlesim_v1',
-			name='kf_pose_turtlesim'
+			name='kf_pose_turtlesim',
+			parameters=[
+				{'dt': dt}
+			]
 		),
 		ExecuteProcess( # move main turtle
 			cmd=[[
