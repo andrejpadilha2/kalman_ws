@@ -47,7 +47,7 @@ class PoseNoise(Node):
 		self.pose_msg = msg
 		
 	def add_noise(self):
-		self.noisy_pose_msg.x = self.pose_msg.x + randn()*.5
+		self.noisy_pose_msg.x = self.pose_msg.x + randn()*.25
 		self.noisy_pose_msg.y = self.pose_msg.y # no noise in 1d version
 		self.noisy_pose_msg.theta = self.pose_msg.theta
 

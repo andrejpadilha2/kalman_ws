@@ -68,14 +68,14 @@ class PoseKalmanFilter(Node):
 		mean = (g1.var * g2.mean + g2.var * g1.mean) / (g1.var + g2.var)
 		variance = (g1.var * g2.var) / (g1.var + g2.var)
 		return PoseKalmanFilter.gaussian(mean, variance)
+		
+	def predict(self, pos, movement):
+		return PoseKalmanFilter.gaussian(pos.mean + movement.mean, pos.var + movement.var)
 
 	def update(self, prior, likelihood):
 		posterior = self.gaussian_multiply(likelihood, prior)
 		return posterior
-    
-	def predict(self, pos, movement):
-		return PoseKalmanFilter.gaussian(pos.mean + movement.mean, pos.var + movement.var)
-		
+    	
 	def kalman_filter(self):
 		self.prior = self.predict(self.x, self.process_model)
 		self.likelihood = PoseKalmanFilter.gaussian(self.noisy_pose_msg.x, self.sensor_var)
