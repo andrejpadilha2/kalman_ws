@@ -24,7 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
         	'noisyOdom = noisy_sensors.noisy_odom:main',
-        	'noisyPoseTurtlesim = noisy_sensors.noisy_pose_turtlesim:main'
+        	'noisy_pose_turtlesim = noisy_sensors.noisy_pose_turtlesim:main'
         ],
     },
 )

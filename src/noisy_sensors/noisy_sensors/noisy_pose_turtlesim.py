@@ -3,13 +3,13 @@ from rclpy.node import Node
 
 from turtlesim.srv import Spawn, TeleportAbsolute
 from turtlesim.msg import Pose
-import random
+from numpy.random import randn
 
 
 class PoseNoise(Node):
 
 	def __init__(self):
-		super().__init__('pose_noise')
+		super().__init__('pose_noise_turtlesim')
 		
 		# Subscribes to turtle1 pose
 		self.pose_subscriber = self.create_subscription(Pose, '/turtle1/pose', self.pose_callback, 10)
@@ -47,8 +47,7 @@ class PoseNoise(Node):
 		self.pose_msg = msg
 		
 	def add_noise(self):
-		rand_float = random.uniform(-0.5,0.5)
-		self.noisy_pose_msg.x = self.pose_msg.x + rand_float
+		self.noisy_pose_msg.x = self.pose_msg.x + randn()*.5
 		self.noisy_pose_msg.y = self.pose_msg.y # no noise in 1d version
 		self.noisy_pose_msg.theta = self.pose_msg.theta
 
@@ -56,7 +55,7 @@ class PoseNoise(Node):
 		self.add_noise()
 		self.pose_publisher.publish(self.noisy_pose_msg)
 		self.teleport_req.x = self.noisy_pose_msg.x
-		self.teleport_req.y = self.noisy_pose_msg.y
+		self.teleport_req.y = self.noisy_pose_msg.y + 1
 		self.teleport_req.theta = self.noisy_pose_msg.theta
 		self.future = self.teleport_client.call_async(self.teleport_req)
 
