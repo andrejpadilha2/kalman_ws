@@ -1,6 +1,6 @@
 from .kalman_filter_1d import KalmanFilter1D # class from kalman_filter_1d.py
 
-def position_filter_1d(x, P, vel, R, Q=0., dt=1.0):
+def position_filter_1d(x, P, vel, R=5., Q=0., dt=1.0):
 	""" Returns a KalmanFilter in 1D (only for position)
 	"""	
 	kf = KalmanFilter1D()

@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'kalman_1d'
+package_name = 'turtlesim_addon'
 
 setup(
     name=package_name,
@@ -16,15 +16,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='andrejpadilha',
-    maintainer_email='andrejpadilha@todo.todo',
+    maintainer='andrepadilha',
+    maintainer_email='andrejpadilha@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'kf_1d_turtlesim_v1 = kalman_1d.kf_1d_turtlesim_v1:main',
-        	'kf_1d_turtlesim_v0 = kalman_1d.kf_1d_turtlesim_v0:main',
+        	'teleport_service_turtlesim = turtlesim_addon.teleport_service_turtlesim:main',
+        	'move_turtle = turtlesim_addon.move_turtle:main',
         ],
     },
 )

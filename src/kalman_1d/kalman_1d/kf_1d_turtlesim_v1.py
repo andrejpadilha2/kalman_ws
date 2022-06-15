@@ -3,7 +3,6 @@ from rclpy.node import Node
 
 from turtlesim.srv import Spawn, TeleportAbsolute
 from turtlesim.msg import Pose
-import random
 from .position_filter_1d import position_filter_1d
 
 class PoseKalmanFilterNode(Node):
@@ -22,15 +21,26 @@ class PoseKalmanFilterNode(Node):
 		
 		self.spawn_turtle(turtle_name="kf_turtle1")
 		
+		self.declare_parameter('x')
+		self.declare_parameter('P')
+		self.declare_parameter('v')
+		self.declare_parameter('R')
+		self.declare_parameter('Q')
 		self.declare_parameter('dt')
-		dt = self.get_parameter('dt').get_parameter_value().double_value # seconds
+		x = self.get_parameter('x').get_parameter_value().double_value
+		P = self.get_parameter('P').get_parameter_value().double_value
+		v = self.get_parameter('v').get_parameter_value().double_value
+		R = self.get_parameter('R').get_parameter_value().double_value
+		Q = self.get_parameter('Q').get_parameter_value().double_value
+		dt = self.get_parameter('dt').get_parameter_value().double_value
+		
 		self.kf = position_filter_1d(
-						x=0.,			# initial position mean
-						P=20.**2,		# initial position variance
-						vel=.3,		# velocity of the turtle
-						R=.25,			# sensor/measurement variance
-						Q=.001,		# process variance
-						dt=dt)	# time step in seconds
+						x=x,			# initial position mean
+						P=P,			# initial position variance
+						vel=v,			# velocity of the turtle
+						R=R,			# sensor/measurement variance
+						Q=Q,			# process variance
+						dt=dt)			# time step in seconds
 		
 		self.timer = self.create_timer(dt, self.publish_kf_pose)	# timer to set the frequency of filter messages
 		

@@ -5,8 +5,13 @@ import launch_ros.actions
 from launch.actions import ExecuteProcess
 
 def generate_launch_description():
-	dt = 0.02
-    
+	x = 0.		# initial position mean
+	P = 20.**2	# initial position variance
+	v = 0.3	# turtle's speed
+	R = 1.		# sensor/measurement variance
+	Q = 0.001	# process variance
+	dt = 0.02	# time interval between measurements in seconds
+	
 	return LaunchDescription([
         	launch_ros.actions.Node( # initialize turtlesim simulation
 			package='turtlesim',
@@ -26,6 +31,7 @@ def generate_launch_description():
 			executable='noisy_pose_turtlesim',
 			name='noisy_pose_turtlesim',
 			parameters=[
+				{'R': R},
 				{'dt': dt}
 			]
 		), 
@@ -35,17 +41,26 @@ def generate_launch_description():
 			executable='kf_1d_turtlesim_v1',
 			name='kf_pose_turtlesim',
 			parameters=[
+				{'x': v},
+				{'P': v},
+				{'v': v},
+				{'R': R},
+				{'Q': Q},
 				{'dt': dt}
 			]
 		),
-		ExecuteProcess( # move main turtle
-			cmd=[[
-				'ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.3, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}"',
-			]],
-			shell=True
+		launch_ros.actions.Node( # move main turtle
+			package='turtlesim_addon',
+			#namespace='turtlesim1',
+			executable='move_turtle',
+			name='move_turtle',
+			parameters=[
+				{'v': v},
+				{'Q': Q}
+			]
 		),
 		launch_ros.actions.Node( # initialize node that teleports turtle to x=0 when ir reaches the end of space
-			package='kalman_1d',
+			package='turtlesim_addon',
 			#namespace='turtlesim',
 			executable='teleport_service_turtlesim',
 			output='screen',

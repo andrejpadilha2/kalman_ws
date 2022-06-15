@@ -4,6 +4,7 @@ from rclpy.node import Node
 from turtlesim.srv import Spawn, TeleportAbsolute
 from turtlesim.msg import Pose
 from numpy.random import randn
+import math
 
 class PoseNoise(Node):
 
@@ -21,7 +22,9 @@ class PoseNoise(Node):
 		
 		self.spawn_turtle(turtle_name='noisy_turtle1')
 		
+		self.declare_parameter('R')
 		self.declare_parameter('dt')
+		self.R = self.get_parameter('R').get_parameter_value().double_value # seconds
 		dt = self.get_parameter('dt').get_parameter_value().double_value # seconds
 		self.timer = self.create_timer(dt, self.publish_noisy_pose)	# timer that to set the frequency of sensor measurements
 		
@@ -29,7 +32,7 @@ class PoseNoise(Node):
 		self.pose_msg = msg
 		
 	def add_noise(self):
-		self.noisy_pose_msg.x = self.pose_msg.x + randn()*.25
+		self.noisy_pose_msg.x = self.pose_msg.x + randn()*math.sqrt(self.R)
 		self.noisy_pose_msg.y = self.pose_msg.y # no noise in 1d version
 		self.noisy_pose_msg.theta = self.pose_msg.theta
 
@@ -58,7 +61,7 @@ class PoseNoise(Node):
 		
 	def teleport_turtle(self):
 		self.teleport_req.x = self.noisy_pose_msg.x
-		self.teleport_req.y = self.noisy_pose_msg.y + 1
+		self.teleport_req.y = self.noisy_pose_msg.y + 1 # hard coded
 		self.teleport_req.theta = self.noisy_pose_msg.theta
 		self.future = self.teleport_client.call_async(self.teleport_req)
 
