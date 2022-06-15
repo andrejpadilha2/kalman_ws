@@ -23,8 +23,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        	'move_turtle_turtlesim = turtlesim_addon.move_turtle_turtlesim:main',
         	'teleport_service_turtlesim = turtlesim_addon.teleport_service_turtlesim:main',
-        	'move_turtle = turtlesim_addon.move_turtle:main',
+        	'visualization_turtle_turtlesim = turtlesim_addon.visualization_turtle_turtlesim:main',
         ],
     },
 )

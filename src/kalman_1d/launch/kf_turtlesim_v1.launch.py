@@ -35,7 +35,7 @@ def generate_launch_description():
 				{'dt': dt}
 			]
 		), 
-		launch_ros.actions.Node( # initialize node that filters noisy sensor
+		launch_ros.actions.Node( # initialize node that filters noisy sensor with Kalman Filter
 			package='kalman_1d',
 			#namespace='turtlesim1',
 			executable='kf_1d_turtlesim_v1',
@@ -49,10 +49,30 @@ def generate_launch_description():
 				{'dt': dt}
 			]
 		),
+		launch_ros.actions.Node(  # spawns turtle to reflect noisy sensor
+			package='turtlesim_addon',
+			#namespace='turtlesim1',
+			executable='visualization_turtle_turtlesim',
+			name='noisy_turtle1',
+			parameters=[
+				{'turtle_name': 'noisy'},
+				{'y_offset': 1}
+			]
+		),
+		launch_ros.actions.Node(  # spawns turtle to reflect filtered measurements
+			package='turtlesim_addon',
+			#namespace='turtlesim1',
+			executable='visualization_turtle_turtlesim',
+			name='kf_turtle1',
+			parameters=[
+				{'turtle_name': 'kf'},
+				{'y_offset': -1}
+			]
+		),
 		launch_ros.actions.Node( # move main turtle
 			package='turtlesim_addon',
 			#namespace='turtlesim1',
-			executable='move_turtle',
+			executable='move_turtle_turtlesim',
 			name='move_turtle',
 			parameters=[
 				{'v': v},
