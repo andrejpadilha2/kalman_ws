@@ -47,16 +47,16 @@ class PoseKalmanFilterNode(Node):
 
 	def publish_kf_pose(self):
 		# KALMAN FILTER ALGORITHM
-		self.kf.predict() # PREDICT STEP
-		self.kf.update(self.noisy_pose_msg.x) # UPDATE STEP
+		self.kf.predict() 			# PREDICT STEP
+		self.kf.update(self.noisy_pose_msg.x) 	# UPDATE STEP
 		#########################
 		
 		self.get_logger().info("P: %.3f, R: %.3f, K: %.3f\n" % (self.kf.P, self.kf.R, self.kf.K))
 		
-		self.kf_pose_msg.x = self.kf.x # writes kalman filter position mean on kf_pose_msg.x
-		self.kf_pose_msg.y = self.noisy_pose_msg.y # in 1d we don't play with the y axis
-		self.kf_pose_msg.theta = self.noisy_pose_msg.theta # in 1d we don't play with theta
-		self.kf_pose_publisher.publish(self.kf_pose_msg) # publish filtered pose
+		self.kf_pose_msg.x = self.kf.x 			# writes kalman filter position mean on kf_pose_msg.x
+		self.kf_pose_msg.y = self.noisy_pose_msg.y 		# in 1d we don't play with the y axis
+		self.kf_pose_msg.theta = self.noisy_pose_msg.theta 	# in 1d we don't play with theta
+		self.kf_pose_publisher.publish(self.kf_pose_msg)	 # publish filtered pose
 
 def main(args=None):
     rclpy.init(args=args)

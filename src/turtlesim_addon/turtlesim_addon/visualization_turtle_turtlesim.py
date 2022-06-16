@@ -5,6 +5,7 @@ from turtlesim.srv import Spawn, TeleportAbsolute
 from turtlesim.msg import Pose
 from numpy.random import randn
 import math
+import time
 
 class VisualizationTurtle(Node):
 
@@ -12,18 +13,19 @@ class VisualizationTurtle(Node):
 		super().__init__('name') # it will be overwritten by the name given in launch file
 		self.declare_parameter('turtle_name')
 		self.turtle_name = self.get_parameter('turtle_name').get_parameter_value().string_value	
-		self.declare_parameter('y_offset')
-		self.y_offset = self.get_parameter('y_offset').get_parameter_value().integer_value
+		self.declare_parameter('y_this_turtle')
+		self.y_this_turtle = self.get_parameter('y_this_turtle').get_parameter_value().double_value
 			
 		# Subscribes to self.turtle_name_pose
-		self.pose_subscriber = self.create_subscription(Pose, '/turtle1/'+self.turtle_name+'_pose', self.pose_callback, 10) # change here
+		self.pose_subscriber = self.create_subscription(Pose, '/turtle1/'+self.turtle_name+'_pose', self.pose_callback, 10)
 		self.pose_subscriber # prevent unused variable warning
 		self.pose_msg = Pose()
 		
+		#time.sleep(2)
 		self.spawn_turtle(self.turtle_name)
 				
 		# Starts teleport service client to teleport self.turle_name, hence reflecting filtered measurements on screen
-		self.teleport_client = self.create_client(TeleportAbsolute, '/' + self.turtle_name + '_turtle1/teleport_absolute')
+		self.teleport_client = self.create_client(TeleportAbsolute, '/' + self.turtle_name + '_visualization_turtle1/teleport_absolute')
 		while not self.teleport_client.wait_for_service(timeout_sec=1.0):
 			self.get_logger().info('Teleport service for ' + self.turtle_name + '_turtle1 not available, waiting again...')
 		self.teleport_req = TeleportAbsolute.Request()
@@ -34,7 +36,7 @@ class VisualizationTurtle(Node):
 			
 	def teleport_turtle(self):
 		self.teleport_req.x = self.pose_msg.x
-		self.teleport_req.y = self.pose_msg.y + self.y_offset
+		self.teleport_req.y = self.y_this_turtle
 		self.teleport_req.theta = self.pose_msg.theta
 		self.future = self.teleport_client.call_async(self.teleport_req)
 		
@@ -44,10 +46,10 @@ class VisualizationTurtle(Node):
 		while not self.spawn_client.wait_for_service(timeout_sec=1.0):
 			self.get_logger().info('Spawn service not available, waiting again...')
 		self.spawn_req = Spawn.Request()
-		self.spawn_req.x = 0. # hard coded
-		self.spawn_req.y = self.pose_msg.y + self.y_offset
-		self.spawn_req.theta = self.pose_msg.theta
-		self.spawn_req.name = turtle_name + '_turtle1'
+		self.spawn_req.x = 0.
+		self.spawn_req.y = self.y_this_turtle
+		self.spawn_req.theta = 0.
+		self.spawn_req.name = turtle_name + '_visualization_turtle1'
 		self.future = self.spawn_client.call_async(self.spawn_req)
 
 def main(args=None):

@@ -9,13 +9,12 @@ def generate_launch_description():
 	P = 20.**2	# initial position variance
 	v = 0.3	# turtle's speed
 	R = 1.		# sensor/measurement variance
-	Q = 0.001	# process variance
+	Q = .01	# process variance
 	dt = 0.02	# time interval between measurements in seconds
 	
 	return LaunchDescription([
         	launch_ros.actions.Node( # initialize turtlesim simulation
 			package='turtlesim',
-			#namespace='turtlesim',
 			executable='turtlesim_node',
 			output='screen',
 			name='turtlesim'),
@@ -27,9 +26,8 @@ def generate_launch_description():
 		),	
 		launch_ros.actions.Node( # initialize node that simulate a noisy sensor
 			package='noisy_sensors',
-			#namespace='turtlesim1',
 			executable='noisy_pose_turtlesim',
-			name='noisy_pose_turtlesim',
+			name='noisy_pose',
 			parameters=[
 				{'R': R},
 				{'dt': dt}
@@ -37,9 +35,8 @@ def generate_launch_description():
 		), 
 		launch_ros.actions.Node( # initialize node that filters noisy sensor with Kalman Filter
 			package='kalman_1d',
-			#namespace='turtlesim1',
 			executable='kf_1d_turtlesim_v1',
-			name='kf_pose_turtlesim',
+			name='kf_pose',
 			parameters=[
 				{'x': v},
 				{'P': v},
@@ -51,27 +48,24 @@ def generate_launch_description():
 		),
 		launch_ros.actions.Node(  # spawns turtle to reflect noisy sensor
 			package='turtlesim_addon',
-			#namespace='turtlesim1',
 			executable='visualization_turtle_turtlesim',
-			name='noisy_turtle1',
+			name='noisy_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'noisy'},
-				{'y_offset': 1}
+				{'y_this_turtle': 6.544445} # where in y-axis this turtle will live
 			]
 		),
 		launch_ros.actions.Node(  # spawns turtle to reflect filtered measurements
 			package='turtlesim_addon',
-			#namespace='turtlesim1',
 			executable='visualization_turtle_turtlesim',
-			name='kf_turtle1',
+			name='kf_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'kf'},
-				{'y_offset': -1}
+				{'y_this_turtle': 4.544445} # where in y-axis this turtle will live
 			]
 		),
 		launch_ros.actions.Node( # move main turtle
 			package='turtlesim_addon',
-			#namespace='turtlesim1',
 			executable='move_turtle_turtlesim',
 			name='move_turtle',
 			parameters=[
@@ -81,11 +75,8 @@ def generate_launch_description():
 		),
 		launch_ros.actions.Node( # initialize node that teleports turtle to x=0 when ir reaches the end of space
 			package='turtlesim_addon',
-			#namespace='turtlesim',
 			executable='teleport_service_turtlesim',
 			output='screen',
 			name='teleport_service_turtlesim'),				
 	])
-
-
 
