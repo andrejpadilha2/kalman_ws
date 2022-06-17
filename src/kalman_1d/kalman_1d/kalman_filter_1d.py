@@ -5,8 +5,8 @@ class KalmanFilter1D(object):
 	def __init__(self):
 		self.R = 1. 	# sensor/measurement variance
 
-		self.x = 0.  	# initial state mean
-		self.P = 1.	# initial state variance
+		self.x = 0.  	# state mean
+		self.P = 1.	# state variance
 		
 		self.dx = 1.	# process model
 		self.Q = 1.	# process variance

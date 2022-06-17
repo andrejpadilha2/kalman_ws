@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'kalman_1d'
+package_name = 'kalman_filter_nd'
 
 setup(
     name=package_name,
@@ -23,8 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'kf_1d_turtlesim_v1 = kalman_1d.kf_1d_turtlesim_v1:main',
-        	'kf_1d_turtlesim_v0 = kalman_1d.kf_1d_turtlesim_v0:main',
+        	'kf_nd_turtlesim_v0 = kalman_filter_nd.kf_nd_turtlesim_v0:main',
         ],
     },
 )
