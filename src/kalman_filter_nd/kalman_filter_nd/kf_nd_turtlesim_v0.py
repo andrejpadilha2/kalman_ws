@@ -44,7 +44,7 @@ class PoseKalmanFilterNode(Node):
 
 		#self.get_logger().info(self.kf.x[0])
 		#self.get_logger().info("K: %.3f\n" % (self.kf.K))
-		self.get_logger().info("P: %.3f, R: %.3f, K: %.3f\n" % (self.kf.P[0,0], self.kf.R[0,0], self.kf.K[0,0]))
+		self.get_logger().info("P_pos: %.3f, P_vel: %.3f, cov_pos_vel: %.3f, R: %.3f, K: %.3f, x_pos: %.3f, x_vel: %.3f\n" % (self.kf.P[0,0], self.kf.P[1,1], self.kf.P[1,0], self.kf.R[0,0], self.kf.K[0,0], self.kf.x[0,0], self.kf.x[1,0]))
 		
 		self.kf_pose_msg.x = self.kf.x[0,0]			# writes kalman filter position mean on kf_pose_msg.x
 		self.kf_pose_msg.y = self.noisy_pose_msg.y 		# in 1d we don't play with the y axis
