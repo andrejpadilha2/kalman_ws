@@ -18,7 +18,9 @@ class PoseNoise(Node):
 		self.pose_msg = Pose()
 		self.noisy_pose_msg = Pose()
 		
-		self.pose_publisher = self.create_publisher(Pose, '/turtle1/noisy_pose', 10) #creates the topic with the noisy measurements
+		self.declare_parameter('topic_name')
+		self.topic_name = self.get_parameter('topic_name').get_parameter_value().string_value
+		self.pose_publisher = self.create_publisher(Pose, self.topic_name, 10) #creates the topic with the noisy measurements
 		
 		self.declare_parameter('R')
 		self.declare_parameter('dt')

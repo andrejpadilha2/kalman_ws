@@ -3,7 +3,7 @@ from rclpy.node import Node
 import numpy as np
 
 from turtlesim.msg import Pose
-from .pos_vel_filter_in_xy import pos_vel_filter_in_xy
+from .pos_vel_filter_sensor_fusion_in_x import pos_vel_filter_sensor_fusion_in_x
 
 class PoseKalmanFilterNode(Node):
 
@@ -11,11 +11,16 @@ class PoseKalmanFilterNode(Node):
 		super().__init__('pose_kalman_filter_turtlesim')
 		self.z = np.array([[0, 0]]).T
 		
-		# Subscribes to turtle1 noisy_pose
+		# Subscribes to turtle1 noisy1_pose
 		self.noisy_pose_subscriber = self.create_subscription(Pose, '/turtle1/noisy_pose', self.noisy_pose_callback, 10)
 		self.noisy_pose_subscriber # prevent unused variable warning
 		
+		# Subscribes to turtle1 noisy2_pose
+		self.noisy2_pose_subscriber = self.create_subscription(Pose, '/turtle1/noisy2_pose', self.noisy2_pose_callback, 10)
+		self.noisy2_pose_subscriber # prevent unused variable warning
+		
 		self.noisy_pose_msg = Pose()
+		self.noisy2_pose_msg = Pose()
 		self.kf_pose_msg = Pose()
 		
 		self.kf_pose_publisher = self.create_publisher(Pose, '/turtle1/kf_pose', 10) # creates the topic with the filtered measurements
@@ -27,7 +32,7 @@ class PoseKalmanFilterNode(Node):
 		R_var = self.get_parameter('R_var').get_parameter_value().double_value
 		dt = self.get_parameter('dt').get_parameter_value().double_value
 		
-		self.kf = pos_vel_filter_in_xy(
+		self.kf = pos_vel_filter_sensor_fusion_in_x(
 						Q_var=Q_var,	# process variance
 						R_var=R_var,	# sensor/measurement covariance matrix
 						dt=dt)		# time step in seconds
@@ -36,7 +41,10 @@ class PoseKalmanFilterNode(Node):
 		
 	def noisy_pose_callback(self, msg):
 		self.noisy_pose_msg = msg
-		self.z = np.array([[self.noisy_pose_msg.x, self.noisy_pose_msg.y]]).T
+		self.z = np.array([[self.noisy_pose_msg.x, self.noisy2_pose_msg.x]]).T # create msg with two sensor measurements on axis x
+		
+	def noisy2_pose_callback(self, msg):
+		self.noisy2_pose_msg = msg
 
 	def publish_kf_pose(self):
 		# KALMAN FILTER ALGORITHM
@@ -44,11 +52,13 @@ class PoseKalmanFilterNode(Node):
 		self.kf.update(self.z) 		# UPDATE STEP
 		#########################
 
-		self.get_logger().info("P_pos: %.3f, P_vel: %.3f, cov_pos_vel: %.3f, R: %.3f, K: %.3f, x_pos: %.3f, x_vel: %.3f, y_pos: %.3f, y_vel: %.3f\n" % (self.kf.P[0,0], self.kf.P[1,1], self.kf.P[1,0], self.kf.R[0,0], self.kf.K[0,0], self.kf.x[0,0], self.kf.x[1,0], self.kf.x[2,0], self.kf.x[3,0]))
+		#self.get_logger().info(self.kf.x[0])
+		#self.get_logger().info("K: %.3f\n" % (self.kf.K))
+		self.get_logger().info("P_pos: %.3f, P_vel: %.3f, cov_pos_vel: %.3f, R: %.3f, K: %.3f, x_pos: %.3f, x_vel: %.3f\n" % (self.kf.P[0,0], self.kf.P[1,1], self.kf.P[1,0], self.kf.R[0,0], self.kf.K[0,0], self.kf.x[0,0], self.kf.x[1,0]))
 		
 		self.kf_pose_msg.x = self.kf.x[0,0]			# writes kalman filter position mean of x on kf_pose_msg.x
-		self.kf_pose_msg.y = self.kf.x[2,0]			# writes kalman filter position mean of y on kf_pose_msg.y
-		self.kf_pose_msg.theta = self.noisy_pose_msg.theta 	# in 2d we don't play with theta
+		self.kf_pose_msg.y = self.noisy_pose_msg.y 		# in 1d we don't play with the y axis
+		self.kf_pose_msg.theta = self.noisy_pose_msg.theta 	# in 1d we don't play with theta
 		self.kf_pose_publisher.publish(self.kf_pose_msg)	# publish filtered pose
 
 def main(args=None):

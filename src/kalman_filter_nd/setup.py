@@ -25,6 +25,8 @@ setup(
         'console_scripts': [
         	'kf_nd_turtlesim_in_x_v0 = kalman_filter_nd.kf_nd_turtlesim_in_x_v0:main',
         	'kf_nd_turtlesim_in_xy_v0 = kalman_filter_nd.kf_nd_turtlesim_in_xy_v0:main',
+        	'kf_sensor_fusion_turtlesim_in_x_v0 = kalman_filter_nd.kf_sensor_fusion_turtlesim_in_x_v0:main',
+        	'kf_sensor_fusion_turtlesim_in_xy_v0 = kalman_filter_nd.kf_sensor_fusion_turtlesim_in_xy_v0:main',
         ],
     },
 )

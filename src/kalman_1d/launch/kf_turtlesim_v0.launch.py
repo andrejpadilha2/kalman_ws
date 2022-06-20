@@ -5,14 +5,16 @@ import launch_ros.actions
 from launch.actions import ExecuteProcess
 
 def generate_launch_description():
-   
+	R_var = 1.
+	dt = 0.02
     
 	return LaunchDescription([
         	launch_ros.actions.Node( # initialize turtlesim simulation
 			package='turtlesim',
 			executable='turtlesim_node',
 			output='screen',
-			name='turtlesim'),
+			name='turtlesim'
+		),
 		ExecuteProcess( # teleport main turtle to x=0
 			cmd=[[
 				'ros2 service call /turtle1/teleport_absolute turtlesim/srv/TeleportAbsolute "{x: 0, y: 5.544445 , theta: 0.0}"', # hard coded y
@@ -22,7 +24,12 @@ def generate_launch_description():
 		launch_ros.actions.Node( # initialize node that simulate a noisy sensor
 			package='noisy_sensors',
 			executable='noisy_pose_in_x_turtlesim',
-			name='noisy_pose_turtlesim'
+			name='noisy_pose_turtlesim',
+			parameters=[
+				{'R': R_var},
+				{'dt': dt},
+				{'topic_name': '/turtle1/noisy_pose'},
+			]
 		), 
 		launch_ros.actions.Node( # initialize node that filters noisy sensor
 			package='kalman_1d',
@@ -39,7 +46,8 @@ def generate_launch_description():
 			package='turtlesim_addon',
 			executable='teleport_service_in_x_turtlesim',
 			output='screen',
-			name='teleport_service_turtlesim'),				
+			name='teleport_service_turtlesim'
+		),				
 	])
 
 

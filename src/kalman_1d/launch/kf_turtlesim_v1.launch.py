@@ -30,7 +30,8 @@ def generate_launch_description():
 			name='noisy_pose',
 			parameters=[
 				{'R': R},
-				{'dt': dt}
+				{'dt': dt},
+				{'topic_name': '/turtle1/noisy_pose'},
 			]
 		), 
 		launch_ros.actions.Node( # initialize node that filters noisy sensor with Kalman Filter

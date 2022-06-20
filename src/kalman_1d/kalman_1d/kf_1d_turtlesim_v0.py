@@ -16,7 +16,7 @@ class PoseKalmanFilter(Node):
 		self.sensor_var = .5 # variance in the sensor
 
 		self.velocity = .3
-		self.dt = 0.1 # time step in seconds
+		self.dt = 0.02 # time step in seconds
 		self.x = PoseKalmanFilter.gaussian(0., 20.**2)  # initial turtle's position, N(0, 20**2)
 		self.process_model = PoseKalmanFilter.gaussian(self.velocity*self.dt, self.process_var) # displacement to add to x CHECK HERE FIRST
 		
