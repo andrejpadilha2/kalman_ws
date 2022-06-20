@@ -8,10 +8,13 @@ from .pos_vel_filter_in_xy import pos_vel_filter_in_xy
 class PoseKalmanFilterNode(Node):
 
 	def __init__(self):	
-		super().__init__('pose_kalman_filter_turtlesim')
-		self.z = np.array([[0, 0]]).T
-				
+		super().__init__('pose_kalman_filter_turtlesim')		
+		
 		# Subscribes to turtle1 noisy_pose
+		self.noisy_pose_subscriber = self.create_subscription(Pose, '/turtle1/noisy_pose', self.noisy_pose_callback, 10)
+		self.noisy_pose_subscriber # prevent unused variable warning
+		
+		# Subscribes to turtle1 keyboard_teleop commands
 		self.noisy_pose_subscriber = self.create_subscription(Pose, '/turtle1/noisy_pose', self.noisy_pose_callback, 10)
 		self.noisy_pose_subscriber # prevent unused variable warning
 		
@@ -27,16 +30,22 @@ class PoseKalmanFilterNode(Node):
 		R_var = self.get_parameter('R_var').get_parameter_value().double_value
 		dt = self.get_parameter('dt').get_parameter_value().double_value
 		
-		F = np.array(	[[1., dt, 0., 0.],				# the state transition matrix (relation of variable states)
-				 [0., 1., 0., 0.],
-				 [0., 0., 1., dt],
-				 [0., 0., 0., 1.]])
+		self.z = np.array([[0, 0]]).T
+		F = np.array(	[[1., 0., 0., 0.],		# the state transition matrix (relation of variable states)
+				 [0., 0., 0., 0.],
+				 [0., 0., 1., 0.],
+				 [0., 0., 0., 0.]])
+		B = np.array([	[dt, 0],			# control function
+				[1,  0],
+				[0, dt],
+				[0,  1]])
 		
 		self.kf = pos_vel_filter_in_xy(
 						Q_var=Q_var,	# process variance
 						R_var=R_var,	# sensor/measurement covariance matrix
 						dt=dt,		# time step in seconds
-						F=F)
+						F=F,
+						B=B)
 		
 		self.timer = self.create_timer(dt, self.publish_kf_pose)	# timer to set the frequency of filter messages
 		

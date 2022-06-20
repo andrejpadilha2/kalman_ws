@@ -32,10 +32,16 @@ class PoseKalmanFilterNode(Node):
 		R_var = self.get_parameter('R_var').get_parameter_value().double_value
 		dt = self.get_parameter('dt').get_parameter_value().double_value
 		
+		F = np.array(	[[1., dt, 0., 0.],				# the state transition matrix (relation of variable states)
+				 [0., 1., 0., 0.],
+				 [0., 0., 1., dt],
+				 [0., 0., 0., 1.]])
+		
 		self.kf = pos_vel_filter_sensor_fusion_in_xy(
 						Q_var=Q_var,	# process variance
 						R_var=R_var,	# sensor/measurement covariance matrix
-						dt=dt)		# time step in seconds
+						dt=dt,		# time step in seconds
+						F=F)
 		
 		self.timer = self.create_timer(dt, self.publish_kf_pose)	# timer to set the frequency of filter messages
 		

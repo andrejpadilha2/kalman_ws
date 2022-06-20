@@ -71,7 +71,7 @@ def generate_launch_description():
 		launch_ros.actions.Node(  		# spawns turtle to reflect noisy sensor 2
 			package='turtlesim_addon',
 			executable='visualization_turtle_in_xy_turtlesim',
-			name='noisy_visualization_turtle1',
+			name='noisy_visualization_turtle2',
 			parameters=[
 				{'turtle_name': 'noisy2'},
 				{'pen_color': [0, 0, 0]},

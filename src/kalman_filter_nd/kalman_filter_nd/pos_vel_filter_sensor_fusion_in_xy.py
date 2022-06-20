@@ -3,7 +3,7 @@ from .discretization import Q_discrete_white_noise # I don't understand this yet
 from scipy.linalg import block_diag
 import numpy as np
 
-def pos_vel_filter_sensor_fusion_in_xy(Q_var, R_var, dt):
+def pos_vel_filter_sensor_fusion_in_xy(Q_var, R_var, dt, F, B=None):
 	""" Returns a KalmanFilter for position AND velocity on 2 axis
 	"""	
 	# KALMAN FILTER PARAMETERS
@@ -12,10 +12,7 @@ def pos_vel_filter_sensor_fusion_in_xy(Q_var, R_var, dt):
 			 [0.,  25., 0.,  0.],
 			 [0.,  0., 121., 0.],
 			 [0.,  0., 0.,  25.]])
-	F = np.array(	[[1., dt, 0.,  0.],				# the state transition matrix (relation of variable states)
-			 [0.,  1., 0.,  0.],
-			 [0.,  0., 1., dt],
-			 [0.,  0., 0.,  1.]])
+	F = F
 	q = Q_discrete_white_noise(dim=2, dt=dt, var=Q_var)		# process covariance matrix
 	Q = block_diag(q, q)
 	H = np.array([[1., 0., 0., 0.],				# observation matrix, converts from state space to measurement space
@@ -34,5 +31,6 @@ def pos_vel_filter_sensor_fusion_in_xy(Q_var, R_var, dt):
 	kf.Q = Q
 	kf.H = H
 	kf.R = R
+	kf.B = B
 	
 	return kf

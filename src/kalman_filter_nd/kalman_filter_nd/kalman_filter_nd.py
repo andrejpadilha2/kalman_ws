@@ -16,12 +16,18 @@ class KalmanFilterND(object):
 		self.Q = eye(dim_x)			# process covariance matrix (process uncertainty)
 		self.H = zeros((dim_z, dim_x))		# observation matrix
 		self.R = eye(dim_z) 			# sensor/measurement covariance matrix
+		self.B = None				# control function
 		
 		self.K = zeros((dim_x, dim_z))		# Kalman gain
 		self.y = zeros((dim_z, 1))		# residual
 		
-	def predict(self):
-		self.x = dot(self.F, self.x)				# priori
+	def predict(self, u=None):
+	
+		if self.B is not None and u is not None:
+			self.x = dot(self.F, self.x) + dot(self.B, u)		# priori with control
+		else:
+			self.x = dot(self.F, self.x)			# priori with no control
+	
 		self.P = dot(dot(self.F, self.P), self.F.T) + self.Q	# priori variance
 		
 	def update(self, z):  
