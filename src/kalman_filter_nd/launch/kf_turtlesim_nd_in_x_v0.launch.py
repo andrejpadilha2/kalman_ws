@@ -28,7 +28,7 @@ def generate_launch_description():
 		),	
 		launch_ros.actions.Node( 		# initialize node that simulate a noisy sensor
 			package='noisy_sensors',
-			executable='noisy_pose_turtlesim',
+			executable='noisy_pose_in_x_turtlesim',
 			name='noisy_pose',
 			parameters=[
 				{'R': R_var},
@@ -37,7 +37,7 @@ def generate_launch_description():
 		), 
 		launch_ros.actions.Node( 		# initialize node that filters noisy sensor with Kalman Filter
 			package='kalman_filter_nd',
-			executable='kf_nd_turtlesim_v0',
+			executable='kf_nd_turtlesim_in_x_v0',
 			name='kf_pose',
 			parameters=[
 				{'Q_var': Q_var},
@@ -47,7 +47,7 @@ def generate_launch_description():
 		),
 		launch_ros.actions.Node(  		# spawns turtle to reflect noisy sensor
 			package='turtlesim_addon',
-			executable='visualization_turtle_turtlesim',
+			executable='visualization_turtle_in_x_turtlesim',
 			name='noisy_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'noisy'},
@@ -56,7 +56,7 @@ def generate_launch_description():
 		),
 		launch_ros.actions.Node(  		# spawns turtle to reflect filtered measurements
 			package='turtlesim_addon',
-			executable='visualization_turtle_turtlesim',
+			executable='visualization_turtle_in_x_turtlesim',
 			name='kf_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'kf'},
@@ -65,7 +65,7 @@ def generate_launch_description():
 		),
 		launch_ros.actions.Node( 		# move main turtle
 			package='turtlesim_addon',
-			executable='move_turtle_turtlesim',
+			executable='move_turtle_in_x_turtlesim',
 			name='move_turtle',
 			parameters=[
 				{'v': v},
@@ -74,7 +74,7 @@ def generate_launch_description():
 		),
 		launch_ros.actions.Node( 		# initialize node that teleports turtle to x=0 when ir reaches the end of space
 			package='turtlesim_addon',
-			executable='teleport_service_turtlesim',
+			executable='teleport_service_in_x_turtlesim',
 			output='screen',
 			name='teleport_service_turtlesim'),				
 	])

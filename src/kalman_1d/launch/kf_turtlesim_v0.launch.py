@@ -10,7 +10,6 @@ def generate_launch_description():
 	return LaunchDescription([
         	launch_ros.actions.Node( # initialize turtlesim simulation
 			package='turtlesim',
-			#namespace='turtlesim',
 			executable='turtlesim_node',
 			output='screen',
 			name='turtlesim'),
@@ -22,13 +21,11 @@ def generate_launch_description():
 		),	
 		launch_ros.actions.Node( # initialize node that simulate a noisy sensor
 			package='noisy_sensors',
-			#namespace='turtlesim1',
-			executable='noisy_pose_turtlesim',
+			executable='noisy_pose_in_x_turtlesim',
 			name='noisy_pose_turtlesim'
 		), 
 		launch_ros.actions.Node( # initialize node that filters noisy sensor
 			package='kalman_1d',
-			#namespace='turtlesim1',
 			executable='kf_1d_turtlesim_v0',
 			name='kf_pose_turtlesim'
 		),
@@ -39,9 +36,8 @@ def generate_launch_description():
 			shell=True
 		),
 		launch_ros.actions.Node( # initialize node that teleports turtle to x=0 when ir reaches the end of space
-			package='kalman_1d',
-			#namespace='turtlesim',
-			executable='teleport_service_turtlesim',
+			package='turtlesim_addon',
+			executable='teleport_service_in_x_turtlesim',
 			output='screen',
 			name='teleport_service_turtlesim'),				
 	])

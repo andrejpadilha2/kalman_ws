@@ -6,8 +6,8 @@ def pos_vel_filter_in_x(Q_var, R_var, dt):
 	""" Returns a KalmanFilter for position AND velocity on 1 axis
 	"""	
 	# KALMAN FILTER PARAMETERS
-	x = np.array([[0., .2]]).T				# initial system state, position and velocity mean
-	P = np.diag([121., 25.])					# initial system state covariance matrix, pos_var = (11m)^2 and vel. var = (5m)^2 and covariances zero
+	x = np.array([[0., .3]]).T				# initial system state, position and velocity mean
+	P = np.diag([1., .1])					# initial system state covariance matrix, pos_var = (11m)^2 and vel. var = (5m)^2 and covariances zero
 	F = np.array(	[[1., dt],				# the state transition matrix (relation of variable states)
 			 [0.,  1.]])
 	Q = Q_discrete_white_noise(dim=2, dt=dt, var=Q_var)	# process covariance matrix

@@ -14,10 +14,10 @@ class KalmanFilterND(object):
 		self.P = eye(dim_x)			# state covariance matrix
 		self.F = eye(dim_x)			# state transition matrix (process model)
 		self.Q = eye(dim_x)			# process covariance matrix (process uncertainty)
-		self.H = zeros((dim_z, dim_x))	# observation matrix
+		self.H = zeros((dim_z, dim_x))		# observation matrix
 		self.R = eye(dim_z) 			# sensor/measurement covariance matrix
 		
-		self.K = zeros((dim_x, dim_z))	# Kalman gain
+		self.K = zeros((dim_x, dim_z))		# Kalman gain
 		self.y = zeros((dim_z, 1))		# residual
 		
 	def predict(self):
