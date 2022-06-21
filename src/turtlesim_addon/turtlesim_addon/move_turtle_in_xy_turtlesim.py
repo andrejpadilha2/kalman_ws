@@ -22,10 +22,11 @@ class MoveTurtle(Node):
 		self.timer = self.create_timer(0.2, self.publish_twist)	# timer to set the frequency of twist messages
 		
 	def publish_twist(self):
-		vel = self.v + (randn() * math.sqrt(self.Q))
+		vel_x = self.v + (randn() * math.sqrt(self.Q))
+		vel_y = self.v + (randn() * math.sqrt(self.Q))
 		
-		self.twist_msg.linear.x = vel 
-		self.twist_msg.linear.y = vel 
+		self.twist_msg.linear.x = vel_x 
+		self.twist_msg.linear.y = vel_y 
 		self.twist_publisher.publish(self.twist_msg) # publish filtered pose
 
 def main(args=None):
