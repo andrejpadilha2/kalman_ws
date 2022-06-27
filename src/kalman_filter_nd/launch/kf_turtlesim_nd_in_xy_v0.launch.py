@@ -50,6 +50,7 @@ def generate_launch_description():
 			name='noisy_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'noisy'},
+				{'spawn_location': [0., 0., 0.]},
 				{'pen_color': [0, 0, 0]},
 				{'pen_width': 0},
 				{'pen_off': 1},
@@ -61,6 +62,7 @@ def generate_launch_description():
 			name='kf_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'kf'},
+				{'spawn_location': [0., 0., 0.]},
 				{'pen_color': [0, 0, 255]},
 				{'pen_width': 2},
 				{'pen_off': 0},

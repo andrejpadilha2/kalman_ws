@@ -22,7 +22,7 @@ class PoseKalmanFilterNode(Node):
 		self.noisy2_pose_subscriber # prevent unused variable warning
 		
 		# Subscribes to keyboard_teleop commands
-		self.keyboard_teleop_subscriber = self.create_subscription(Twist, '/turtle1/cmd_vel', self.keyboard_teleop_callback, 10)
+		self.keyboard_teleop_subscriber = self.create_subscription(Twist, '/turtle1/cmd_vel_no_noise', self.keyboard_teleop_callback, 10)
 		self.keyboard_teleop_subscriber # prevent unused variable warning
 		
 		self.noisy_pose_msg = Pose()
@@ -39,12 +39,12 @@ class PoseKalmanFilterNode(Node):
 		R_var = self.get_parameter('R_var').get_parameter_value().double_value
 		dt = self.get_parameter('dt').get_parameter_value().double_value
 		
-		self.F = np.array(	[[1., 0., 0., 0.],		# the state transition matrix (relation of variable states)
+		F = np.array(	[[1., 0., 0., 0.],		# the state transition matrix (relation of variable states)
 				 [0., 0., 0., 0.],
 				 [0., 0., 1., 0.],
 				 [0., 0., 0., 0.]])
 
-		self.B = np.array([	[dt, 0.],			# control function
+		B = np.array([	[dt, 0.],			# control function
 				[1., 0.],
 				[0., dt],
 				[0.,  1.]])
@@ -53,14 +53,14 @@ class PoseKalmanFilterNode(Node):
 						Q_var=Q_var,	# process variance
 						R_var=R_var,	# sensor/measurement covariance matrix
 						dt=dt,		# time step in seconds
-						F=self.F,
-						B=self.B)
+						F=F,
+						B=B)
 		
 		self.timer = self.create_timer(dt, self.publish_kf_pose)	# timer to set the frequency of filter messages
 		
 	def keyboard_teleop_callback(self, msg):
 		self.keyboard_teleop_msg = msg
-		self.u = np.array([self.keyboard_teleop_msg.linear.x, self.keyboard_teleop_msg.linear.y]).T
+		self.u = np.array([[self.keyboard_teleop_msg.linear.x, self.keyboard_teleop_msg.linear.y]]).T
 		#self.get_logger().info("u.x: %.3f, u.y: %.3f\n" % (self.u[0], self.u[1]))	
 		
 	def noisy_pose_callback(self, msg):
@@ -71,19 +71,11 @@ class PoseKalmanFilterNode(Node):
 		self.noisy2_pose_msg = msg
 
 	def publish_kf_pose(self):
-		self.get_logger().info("u.x: %.3f, u.y: %.3f\n" % (self.u[0], self.u[1]))	
 		# KALMAN FILTER ALGORITHM
-		#self.kf.predict(self.u) 		# PREDICT STEP
-		#self.get_logger().info("x.pos: %.3f, x.vel: %.3f, y.pos: %.3f, y.vel: %.3f\n" % (self.kf.x[0,0], self.kf.x[1,0], self.kf.x[2,0], self.kf.x[3,0]))
-		Bu = np.dot(self.B, self.u)	
-		self.get_logger().info("x.pos: %.3f, x.vel: %.3f, y.pos: %.3f, y.vel: %.3f\n" % (Bu[0], Bu[1], Bu[2], Bu[3]))
-		self.kf.x = np.dot(self.F, self.kf.x) + Bu
-		self.get_logger().info("x.pos: %.3f, x.vel: %.3f, y.pos: %.3f, y.vel: %.3f\n" % (self.kf.x[0,0], self.kf.x[1,0], self.kf.x[2,0], self.kf.x[3,0]))
+		self.kf.predict(self.u) 		# PREDICT STEP
 		self.kf.update(self.z) 		# UPDATE STEP
-		#########################
-		#self.u = np.array([[0, 0]]).T
-		
-		#self.get_logger().info("P_pos: %.3f, P_vel: %.3f, cov_pos_vel: %.3f, R: %.3f, K: %.3f, x_pos: %.3f, x_vel: %.3f, y_pos: %.3f, y_vel: %.3f\n" % (self.kf.P[0,0], self.kf.P[1,1], self.kf.P[1,0], self.kf.R[0,0], self.kf.K[0,0], self.kf.x[0,0], self.kf.x[1,0], self.kf.x[2,0], self.kf.x[3,0]))
+				
+		self.get_logger().info("P_pos: %.3f, P_vel: %.3f, cov_pos_vel: %.3f, R: %.3f, K: %.3f, x_pos: %.3f, x_vel: %.3f, y_pos: %.3f, y_vel: %.3f\n" % (self.kf.P[0,0], self.kf.P[1,1], self.kf.P[1,0], self.kf.R[0,0], self.kf.K[0,0], self.kf.x[0,0], self.kf.x[1,0], self.kf.x[2,0], self.kf.x[3,0]))
 		
 		self.kf_pose_msg.x = self.kf.x[0,0]			# writes kalman filter position mean of x on kf_pose_msg.x
 		self.kf_pose_msg.y = self.kf.x[2,0]			# writes kalman filter position mean of y on kf_pose_msg.y

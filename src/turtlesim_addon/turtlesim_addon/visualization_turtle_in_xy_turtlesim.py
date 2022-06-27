@@ -13,6 +13,8 @@ class VisualizationTurtle(Node):
 		super().__init__('name') # it will be overwritten by the name given in launch file
 		self.declare_parameter('turtle_name')
 		self.turtle_name = self.get_parameter('turtle_name').get_parameter_value().string_value
+		self.declare_parameter('spawn_location')
+		self.spawn_location = self.get_parameter('spawn_location').get_parameter_value().double_array_value
 		self.declare_parameter('pen_color')
 		self.pen_color = self.get_parameter('pen_color').get_parameter_value().integer_array_value
 		self.declare_parameter('pen_width')
@@ -57,9 +59,9 @@ class VisualizationTurtle(Node):
 		while not self.spawn_client.wait_for_service(timeout_sec=1.0):
 			self.get_logger().info('Spawn service not available, waiting again...')
 		self.spawn_req = Spawn.Request()
-		self.spawn_req.x = 0.
-		self.spawn_req.y = 0.
-		self.spawn_req.theta = 0.
+		self.spawn_req.x = self.spawn_location[0]
+		self.spawn_req.y = self.spawn_location[1]
+		self.spawn_req.theta = self.spawn_location[2]
 		self.spawn_req.name = turtle_name + '_visualization_turtle1'
 		self.future = self.spawn_client.call_async(self.spawn_req)
 		

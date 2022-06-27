@@ -26,6 +26,7 @@ setup(
         	'move_turtle_in_x_turtlesim = turtlesim_addon.move_turtle_in_x_turtlesim:main',
         	'move_turtle_in_x_control_turtlesim = turtlesim_addon.move_turtle_in_x_control_turtlesim:main',
         	'move_turtle_in_xy_turtlesim = turtlesim_addon.move_turtle_in_xy_turtlesim:main',
+        	'move_turtle_in_xy_control_turtlesim = turtlesim_addon.move_turtle_in_xy_control_turtlesim:main',
         	'teleport_service_in_x_turtlesim = turtlesim_addon.teleport_service_in_x_turtlesim:main',
         	'teleport_service_in_xy_turtlesim = turtlesim_addon.teleport_service_in_xy_turtlesim:main',
         	'visualization_turtle_in_x_turtlesim = turtlesim_addon.visualization_turtle_in_x_turtlesim:main',

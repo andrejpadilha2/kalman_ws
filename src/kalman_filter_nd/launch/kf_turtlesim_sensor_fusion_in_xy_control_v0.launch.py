@@ -8,7 +8,7 @@ import numpy as np
 
 def generate_launch_description():
 	# SIMULATION PARAMETERS
-	Q_var = .01				# real process variance
+	Q_var = .001				# real process variance
 	R_var = 1.				# sensor variance (there would be one for each sensor)
 	sensor_data_rate = 50			# in Hz
 	dt = 1/sensor_data_rate		# time interval
@@ -19,13 +19,7 @@ def generate_launch_description():
 			package='turtlesim',
 			executable='turtlesim_node',
 			output='screen',
-			name='turtlesim'),
-		ExecuteProcess( 			# teleport main turtle to x=0
-			cmd=[[
-				'ros2 service call /turtle1/teleport_absolute turtlesim/srv/TeleportAbsolute "{x: 0, y: 0 , theta: 0.0}"', # hard coded y
-			]],
-			shell=True
-		),	
+			name='turtlesim'),	
 		launch_ros.actions.Node( 		# initialize node that simulates noisy sensor 1
 			package='noisy_sensors',
 			executable='noisy_pose_in_xy_turtlesim',
@@ -62,6 +56,7 @@ def generate_launch_description():
 			name='noisy_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'noisy'},
+				{'spawn_location': [5.544444561, 5.544444561, 0.0]},
 				{'pen_color': [0, 0, 0]},
 				{'pen_width': 0},
 				{'pen_off': 1},
@@ -73,6 +68,7 @@ def generate_launch_description():
 			name='noisy_visualization_turtle2',
 			parameters=[
 				{'turtle_name': 'noisy2'},
+				{'spawn_location': [5.544444561, 5.544444561, 0.0]},
 				{'pen_color': [0, 0, 0]},
 				{'pen_width': 0},
 				{'pen_off': 1},
@@ -84,6 +80,7 @@ def generate_launch_description():
 			name='kf_visualization_turtle1',
 			parameters=[
 				{'turtle_name': 'kf'},
+				{'spawn_location': [5.544444561, 5.544444561, 0.0]},
 				{'pen_color': [0, 0, 255]},
 				{'pen_width': 2},
 				{'pen_off': 0},
@@ -98,7 +95,15 @@ def generate_launch_description():
 				#{'_repeat_rate': '10.0'},
 			],
 			remappings=[
-				('cmd_vel', 'turtle1/cmd_vel'),
+				('cmd_vel', 'turtle1/cmd_vel_no_noise'),
+			]
+		),
+		launch_ros.actions.Node( 		# move main turtle
+			package='turtlesim_addon',
+			executable='move_turtle_in_xy_control_turtlesim',
+			name='move_turtle',
+			parameters=[
+				{'Q': Q_var}
 			]
 		),
 		launch_ros.actions.Node( 		# initialize node that teleports turtle to x=0 when it reaches the end of space
