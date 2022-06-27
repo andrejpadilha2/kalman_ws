@@ -14,7 +14,7 @@ class KalmanFilterND(object):
 		self.P = eye(dim_x)			# state covariance matrix
 		self.F = eye(dim_x)			# state transition matrix (process model)
 		self.Q = eye(dim_x)			# process covariance matrix (process uncertainty)
-		self.H = zeros((dim_z, dim_x))		# observation matrix
+		self.H = zeros((dim_z, dim_x))	# observation matrix
 		self.R = eye(dim_z) 			# sensor/measurement covariance matrix
 		self.B = None				# control function
 		

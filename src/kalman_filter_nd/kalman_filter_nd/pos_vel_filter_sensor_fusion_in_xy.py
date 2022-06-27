@@ -7,7 +7,7 @@ def pos_vel_filter_sensor_fusion_in_xy(Q_var, R_var, dt, F, B=None):
 	""" Returns a KalmanFilter for position AND velocity on 2 axis
 	"""	
 	# KALMAN FILTER PARAMETERS
-	x = np.array([[0., .2, 0., .2]]).T				# initial system state, position and velocity mean
+	x = np.array([[0., 0., 0., 0.]]).T				# initial system state, position and velocity mean
 	P = np.array(	[[121., 0., 0.,  0.],				# initial system state covariance matrix, pos_var = (11m)^2 and vel. var = (5m)^2 and covariances zero
 			 [0.,  25., 0.,  0.],
 			 [0.,  0., 121., 0.],
