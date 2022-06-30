@@ -28,15 +28,12 @@ class MoveTurtle(Node):
 		self.keyboard_teleop_msg = msg	
 		
 	def publish_twist(self):
-		if (self.keyboard_teleop_msg.linear.x == 0):
+		if (self.keyboard_teleop_msg.linear.x == 0 and self.keyboard_teleop_msg.linear.y == 0):
 			vel_x = 0.
-		else:
-			vel_x = self.keyboard_teleop_msg.linear.x + (randn() * math.sqrt(self.Q))
-		
-		if (self.keyboard_teleop_msg.linear.y == 0):
 			vel_y = 0.
 		else:
-			vel_y = self.keyboard_teleop_msg.linear.y + (randn() * math.sqrt(self.Q))
+			vel_x = self.keyboard_teleop_msg.linear.x + (randn() * math.sqrt(self.Q))
+			vel_y = self.keyboard_teleop_msg.linear.y + (randn() * math.sqrt(self.Q))	
 		
 		self.twist_msg.linear.x = vel_x 
 		self.twist_msg.linear.y = vel_y 

@@ -8,7 +8,7 @@ import numpy as np
 
 def generate_launch_description():
 	# SIMULATION PARAMETERS
-	Q_var = .001				# real process variance
+	Q_var = .01				# real process variance
 	R_var = 1.				# sensor variance (there would be one for each sensor)
 	sensor_data_rate = 50			# in Hz
 	dt = 1/sensor_data_rate		# time interval
