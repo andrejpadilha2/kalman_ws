@@ -17,12 +17,13 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(xacro REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 install(
-  DIRECTORY config launch maps meshes models params rviz src worlds
+  DIRECTORY src launch rviz config world meshes
   DESTINATION share/${PROJECT_NAME}
 )
 
